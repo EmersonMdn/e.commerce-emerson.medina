@@ -1,0 +1,7 @@
+.navBar{
+    background-color: rgba(12, 12, 12, 0.829);
+    display: flex;
+    justify-content: space-evenly;
+    padding-right: 20px;
+    color : white;
+}

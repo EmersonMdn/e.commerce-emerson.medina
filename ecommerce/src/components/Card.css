@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&family=Nuosu+SIL&family=Roboto:wght@100&display=swap');
+/* font-family: 'Noto Sans', sans-serif;
+font-family: 'Nuosu SIL', serif;
+font-family: 'Roboto', sans-serif; */
+
+.card{
+    background-color: rgba(0, 0, 0, 0.075);
+    width: 250px;
+    padding: 10px 10px;
+    height: 400px;
+    color : white;
+    font-family: 'Noto Sans', sans-serif;
+    line-height: 1.5;
+    font-weight: bold;
+}
