@@ -1,7 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&family=Nuosu+SIL&family=Roboto:wght@100&display=swap');
+/* font-family: 'Noto Sans', sans-serif;
+font-family: 'Nuosu SIL', serif;
+font-family: 'Roboto', sans-serif; */
+
 .navBar{
     background-color: rgba(12, 12, 12, 0.829);
-    display: flex;
-    justify-content: space-evenly;
     padding-right: 20px;
     color : white;
+    height: 60px;
+    padding-top: 1%;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bolder;
+}
+
+.navBar__list{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.navBar__list img{
+    width: 30px;
+}
+.logo{
+    font-size: 20px;
+    color: rgba(250, 15, 15, 0.897);
+}
+.navBar__item{
+    background-color: rgb(229, 226, 226);
+    color: black;
+    border:  solid 1px rgb(5, 5, 5);
+    padding: 4px;
+    width: 100%;
+    cursor: pointer;
+}
+.navBar__item:hover{
+    background-color: rgb(5, 5, 5);
+    color: white;
+    transition: 0.4s;
 }

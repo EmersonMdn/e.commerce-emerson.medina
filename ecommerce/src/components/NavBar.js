@@ -2,11 +2,14 @@ import  './NavBar.css'
 
 function NavBar() {
   return (
-    <header>
+    <header id='navBar'>
       <nav className='navBar'>
-        <p>Inicio</p>
-        <p>Nosotros</p>
-        <p>Tienda</p>
+        <ul className='navBar__list'>
+          <li className='navBar__item'><i class="fa-solid fa-basket-shopping logo"></i> Mi E-Commerce</li>
+          <li className='navBar__item'>Inicio</li>
+          <li className='navBar__item'>Productos</li>
+          <li className='navBar__item'>Contacto</li>
+        </ul>
       </nav>
     </header>
   );
