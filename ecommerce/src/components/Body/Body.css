@@ -1,0 +1,6 @@
+
+#body{
+    height: 100vh;
+    background-color: rgb(223, 223, 223);
+    display: flex;
+}

@@ -1,13 +1,15 @@
 import './App.css';
-import NavBar from './components/NavBar';
-import Body from './components/Body';
+import Nav from './components/navBar/NavBar'; // Import NavBar component
+import Body from './components/Body/Body';
+
 
 function App() {
   return (
-    < div className = "App" >
-      <NavBar />
+    <div>
+      <Nav />
       <Body />
-    </div >
+    </div>
+      
   );
 }
 

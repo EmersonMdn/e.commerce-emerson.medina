@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fascinate&family=Jacques+Francois+Shadow&family=Playfair+Display:wght@500&display=swap');
+/* font-family: 'Bebas Neue', cursive;
+font-family: 'Fascinate', cursive;
+font-family: 'Jacques Francois Shadow', cursive;
+font-family: 'Playfair Display', serif;*/
+
+#navbar-main{
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+}
+.nav-link{
+    color: aliceblue;
+    border: solid 2px rgb(212, 212, 212);
+    border-radius:8px;
+    margin:0 5px;
+}
+.nav-link:hover{
+    color: rgb(248, 203, 2);
+    box-shadow: 0px 0 10px 0 rgba(253, 207, 0, 0.842);
+}
+
+.navbar-brand{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 0 24px;
+    border: 2px solid rgb(0, 0, 0);
+    font-size: 35px;
+    font-family: harryptr;
+    color: rgb(34, 36, 36);
+}
+.navbar-brand:hover{
+    color: rgb(253, 207, 0);
+    box-shadow: 0px 0 10px 0 rgba(253, 207, 0, 0.842);
+    border: 2px solid rgba(253, 207, 0, 0.253);
+}
+.logolumo{
+    width: 40px;
+}
+
+.navbar-toggler{
+    background-color: rgb(255, 255, 255);
+}
+.navbar-toggler-icon{
+    color: rgb(121, 118, 118);
+    font-size: 25px;
+}
