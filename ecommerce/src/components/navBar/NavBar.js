@@ -1,12 +1,14 @@
+import CartWidget from './CartWidget/CartWidget';
 import './NavBar.css';
 
+
 function NavBar() {
-  return (
+  return (<>
     <div className="row justify-content-around" id='navbar-main'>
       <nav className="navbar navbar-expand-lg" id='home'>
-        <a className="navbar-brand" href="#home">  <i class="fa-solid fa-wand-sparkles"></i>Lumos</a>
+        <a className="navbar-brand" href="#home"> <i className="fa-solid fa-hat-wizard"></i>Lumos</a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+          <span className="navbar-toggler-icon"><i className="fa-solid fa-bars"></i></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
@@ -23,17 +25,14 @@ function NavBar() {
               </div>
             </li>
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-cart-shopping"></i>
-              </a>
-              <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <p className="dropdown-item">No hay nada en el carro</p>
-              </div>
+              <CartWidget />
             </li>
           </ul>
         </div>
       </nav>
     </div>
-    
+    <p className='text-descuento'>15% de descuento en compras superiores a $ 2.999</p>
+    </>
   );
 }
 

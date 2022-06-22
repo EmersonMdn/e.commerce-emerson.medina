@@ -10,13 +10,16 @@ font-family: 'Playfair Display', serif;*/
 }
 .nav-link{
     color: aliceblue;
-    border: solid 2px rgb(212, 212, 212);
-    border-radius:8px;
+    border-bottom: solid 2px rgb(212, 212, 212);
+    font-family: 'Poppins', sans-serif;
     margin:0 5px;
+}
+.dropdown-item{
+    font-family: 'Poppins', sans-serif;
 }
 .nav-link:hover{
     color: rgb(248, 203, 2);
-    box-shadow: 0px 0 10px 0 rgba(253, 207, 0, 0.842);
+    box-shadow: 0px 0 10px 0 rgba(253, 207, 0, 0.226);
 }
 
 .navbar-brand{
@@ -32,6 +35,7 @@ font-family: 'Playfair Display', serif;*/
     color: rgb(253, 207, 0);
     box-shadow: 0px 0 10px 0 rgba(253, 207, 0, 0.842);
     border: 2px solid rgba(253, 207, 0, 0.253);
+    background-color: rgb(14, 14, 14);
 }
 .logolumo{
     width: 40px;
@@ -43,4 +47,10 @@ font-family: 'Playfair Display', serif;*/
 .navbar-toggler-icon{
     color: rgb(121, 118, 118);
     font-size: 25px;
+}
+
+.text-descuento{
+    background-color: rgb(255, 166, 0);
+    color: rgb(255, 255, 164);
+    text-align: center;
 }

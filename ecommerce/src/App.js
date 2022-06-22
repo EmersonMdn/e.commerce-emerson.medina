@@ -1,13 +1,15 @@
 import './App.css';
 import Nav from './components/navBar/NavBar'; // Import NavBar component
-import Body from './components/Body/Body';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import SliderProducts from './components/SliderProducts/SliderProducts';
 
 
 function App() {
   return (
     <div>
       <Nav />
-      <Body />
+      <SliderProducts />
+      <ItemListContainer />
     </div>
       
   );
