@@ -1,6 +1,9 @@
 .sliderMain{
     max-width: 1000px;
-    margin: 50px auto;
+    margin: 10px auto;
     overflow: hidden;
     font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background-color: rgba(7, 7, 7, 0.836);
 }
+

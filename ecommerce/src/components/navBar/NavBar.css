@@ -24,6 +24,7 @@ font-family: 'Playfair Display', serif;*/
 
 .navbar-brand{
     background-color: rgb(255, 255, 255);
+    letter-spacing: 4px;
     border-radius: 10px;
     padding: 0 24px;
     border: 2px solid rgb(0, 0, 0);
@@ -53,4 +54,5 @@ font-family: 'Playfair Display', serif;*/
     background-color: rgb(255, 166, 0);
     color: rgb(255, 255, 164);
     text-align: center;
+    margin: 0;
 }

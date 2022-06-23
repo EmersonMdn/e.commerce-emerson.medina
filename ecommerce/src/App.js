@@ -8,7 +8,9 @@ function App() {
   return (
     <div>
       <Nav />
-      <SliderProducts />
+      <div className="container-slide">
+        <SliderProducts/>
+      </div>
       <ItemListContainer />
     </div>
       

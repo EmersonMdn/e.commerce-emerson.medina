@@ -1,6 +1,6 @@
 import React, {useRef, useEffect} from 'react';
 import './SlideShow.css';
-import img1 from './../../../assets/img/assetsss/1.jpg';
+import img1 from './../../../assets/img/Indumentaria/gr1.jpg';
 import img2 from './../../../assets/img/assetsss/2.jpg';
 import img3 from './../../../assets/img/assetsss/3.jpg';
 import img4 from './../../../assets/img/assetsss/4.jpg';

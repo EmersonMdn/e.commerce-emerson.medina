@@ -6,7 +6,7 @@ function NavBar() {
   return (<>
     <div className="row justify-content-around" id='navbar-main'>
       <nav className="navbar navbar-expand-lg" id='home'>
-        <a className="navbar-brand" href="#home"> <i className="fa-solid fa-hat-wizard"></i>Lumos</a>
+        <a className="navbar-brand" href="#home"> <i className="fa-solid fa-hat-wizard"></i>LUMOS</a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"><i className="fa-solid fa-bars"></i></span>
         </button>

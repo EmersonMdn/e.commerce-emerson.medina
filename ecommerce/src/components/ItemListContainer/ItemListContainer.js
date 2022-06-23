@@ -1,18 +1,13 @@
 import './ItemListContainer.css';
+import ItemList from './ItemList/ItemList';
+
 
 function ItemListContainer() {
-    return ( <div className='container ItemListContainer'>
-        <ul>
-            <li>Item</li>
-            <li>Item</li>
-            <li>Item</li>
-            <li>Item</li>
-            <li>Item</li>
-            <li>Item</li>
-            <li>Item</li>
-            <li>Item</li>
-        </ul>
+    return ( 
+    <div className='container' id='ItemListContainer'>
+        <h3>Todos los productos</h3> 
+        <ItemList />
     </div> );
 }
 
-export default ItemListContainer;
+export default ItemListContainer; 

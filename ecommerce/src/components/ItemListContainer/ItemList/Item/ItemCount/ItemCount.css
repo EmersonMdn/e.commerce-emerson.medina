@@ -1,0 +1,18 @@
+.item-count{
+    background-color: rgb(245, 133, 4);
+    display: flex;
+    justify-content: space-between;
+    align-items:stretch;
+    padding: 2%;
+    border: 3px solid rgb(5, 5, 5);
+
+}
+.item-count p{
+    margin: 0;
+    padding: 2%;
+    font-size: 18px;
+}
+
+.item-count button{
+    font-size: 1.5rem;
+}
