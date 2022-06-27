@@ -1,11 +1,13 @@
+p{
+    margin: 0;
+    padding: 0
+}
+
 .item-count{
-    background-color: rgb(245, 133, 4);
     display: flex;
     justify-content: space-between;
     align-items:stretch;
     padding: 2%;
-    border: 3px solid rgb(5, 5, 5);
-
 }
 .item-count p{
     margin: 0;
@@ -14,5 +16,27 @@
 }
 
 .item-count button{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    border:none;
+    padding: 0 10px;
+}
+
+.item-count-container{
+    border: 1px solid rgba(8, 8, 8, 0.171);
+    border-radius: 15px;
+}
+.addCart-btn{
+    background-color: rgba(0, 0, 0, 0.603);
+    color: white;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    padding: 0 15px;
+}
+.addCart-btn:hover{
+    color: white;
+    border-radius: 5px;
+}
+
+.addCart{
+    padding: 10px;
 }
