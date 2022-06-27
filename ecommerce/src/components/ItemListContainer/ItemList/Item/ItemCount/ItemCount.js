@@ -2,11 +2,11 @@ import './ItemCount.css';
 import React, { useState } from 'react';
 
 
-function ItemCount() {
+function ItemCount(props) {
     const [valor, setValor] = useState(1);
 
     const sumar = () => {
-        if(valor < 5){
+        if(valor < props.stock){
             setValor(valor + 1);
         }
         
