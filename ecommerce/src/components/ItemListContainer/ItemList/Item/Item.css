@@ -1,11 +1,8 @@
 .item{
     border-radius: 5px;
-    font-family: Poppins;
-    justify-content:space-around;
     margin: 10px 20px;
     width: 260px;
     padding: 1%;
-    overflow: hidden;
     text-align: center;
     box-shadow: 0px 0px 1px  1px rgb(92, 92, 92);
     background-color: rgba(65, 65, 65, 0.281);
@@ -19,4 +16,16 @@
     height: 10rem;
     object-fit: cover;
     border: 1px solid
+}
+.item h4{
+    color:rgb(0, 0, 0);
+    font-weight: bold;
+}
+.precio{
+    background-color: rgba(255, 136, 0, 0.589);
+}
+
+.disponible{
+    color: rgb(255, 208, 0);
+    text-shadow: 0px 0px 7px rgb(8, 8, 8);
 }

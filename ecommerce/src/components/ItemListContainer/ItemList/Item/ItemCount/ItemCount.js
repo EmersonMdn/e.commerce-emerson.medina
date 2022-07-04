@@ -8,7 +8,7 @@ function ItemCount(props) {
     const sumar = () => {
         if(valor < props.stock){
             setValor(valor + 1);
-        }
+        } 
         
     }
     const restar = () => {

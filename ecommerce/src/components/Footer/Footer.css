@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fascinate&family=Jacques+Francois+Shadow&family=Playfair+Display:wght@500&family=Poppins&display=swap');
+/* 
+font-family: 'Bebas Neue', cursive;
+font-family: 'Fascinate', cursive;
+font-family: 'Jacques Francois Shadow', cursive;
+font-family: 'Playfair Display', serif;
+font-family: 'Poppins', sans-serif;*/
+
+.table-ftr{
+    text-align: center;
+    background-color: rgb(37, 37, 37);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.list-group-item{
+    background-color:transparent;
+    border: none;
+}
+
+.list-group-item a{
+    color: #fff
+}

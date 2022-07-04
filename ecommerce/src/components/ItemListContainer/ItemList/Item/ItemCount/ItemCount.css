@@ -8,6 +8,7 @@ p{
     justify-content: space-between;
     align-items:stretch;
     padding: 2%;
+    border: 1px solid rgba(41, 41, 41, 0.363);
 }
 .item-count p{
     margin: 0;
@@ -16,25 +17,28 @@ p{
 }
 
 .item-count button{
-    font-size: 1.3rem;
+    font-size: 12px;
     border:none;
     padding: 0 10px;
+    background-color: rgba(70, 70, 70, 0.11);
 }
 
-.item-count-container{
-    border: 1px solid rgba(8, 8, 8, 0.171);
-    border-radius: 15px;
-}
+
 .addCart-btn{
-    background-color: rgba(0, 0, 0, 0.603);
+    background-color: rgb(255, 166, 0);
     color: white;
-    font-size: 1.3rem;
+    font-size: 17px;
+    border-bottom: 4px solid rgb(255, 145, 0);
+    border-right:3px solid rgb(255, 145, 0) ;
     border-radius: 5px;
     padding: 0 15px;
+    width: 100%;
 }
 .addCart-btn:hover{
     color: white;
+    border-bottom: 6px solid rgb(255, 145, 0);
     border-radius: 5px;
+    text-decoration: none;
 }
 
 .addCart{

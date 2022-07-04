@@ -1,7 +1,7 @@
 import React, {useRef, useEffect} from 'react';
 import './SlideShow.css';
 import img1 from './../../../assets/img/Indumentaria/gr1.jpg';
-import img2 from './../../../assets/img/assetsss/2.jpg';
+import img2 from './../../../assets/img/Joyas/image .png';
 import img3 from './../../../assets/img/assetsss/3.jpg';
 import img4 from './../../../assets/img/assetsss/4.jpg';
 
@@ -54,22 +54,23 @@ function SlideShow() {
         }
     }
 
-//    useEffect(()=>{
-//     intervaloSlide.current = setInterval(()=>{
-//         siguiente();
-//     }, 5000);
 
-//     slideShow.current.addEventListener('mouseenter', ()=>{
-//         clearInterval(intervaloSlide.current);
-//     })
+   useEffect(()=>{
+    intervaloSlide.current = setInterval(()=>{
+        siguiente();
+    }, 5000);
 
-//     slideShow.current.addEventListener('mouseleave', ()=>{
-//         intervaloSlide.current = setInterval(()=>{
-//             siguiente();
-//         }, 5000);
-//     })
+    slideShow.current.addEventListener('mouseenter', ()=>{
+        clearInterval(intervaloSlide.current);
+    })
 
-//    }, [])
+    slideShow.current.addEventListener('mouseleave', ()=>{
+        intervaloSlide.current = setInterval(()=>{
+            siguiente();
+        }, 5000);
+    })
+
+   }, [])
 
     return ( 
     <div className='MainContainer'>

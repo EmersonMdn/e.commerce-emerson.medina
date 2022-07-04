@@ -9,8 +9,8 @@ function Item(props) {
             <div className='item'>
                 <h4>{props.nombre}</h4>
                 <img className='img-item' src= {props.img}  alt= {props.nombre} />
-                <p>Precio: {props.precio}</p>
-                <small>En stock: {props.stock}</small>
+                <p className='precio'>Precio: {props.precio}</p>
+                <small className='disponible'>Disponibles: {props.stock}</small>
                 <ItemCount stock={props.stock} />
             </div> 
         </>);
