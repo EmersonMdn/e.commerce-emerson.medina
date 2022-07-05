@@ -62,14 +62,13 @@ function SlideShow() {
 
     slideShow.current.addEventListener('mouseenter', ()=>{
         clearInterval(intervaloSlide.current);
-    })
+    });
 
     slideShow.current.addEventListener('mouseleave', ()=>{
         intervaloSlide.current = setInterval(()=>{
             siguiente();
         }, 5000);
-    })
-
+    });
    }, [])
 
     return ( 
