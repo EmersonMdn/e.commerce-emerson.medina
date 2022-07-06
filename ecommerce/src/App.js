@@ -13,11 +13,7 @@ function App() {
       <Nav />
       <Routes>
         <Route exact path='/' element={<ItemListContainer />} />
-<<<<<<< HEAD
         <Route exact path='/productos/:productId' element={<ItemDetailContainer />} />
-=======
-        <Route exact path='/productos/:productId' element={<ItemDetail />} />
->>>>>>> 822a9c0c55b08c96440a635825eac598b5a02fdb
       </Routes>  
       <Footer />
     </div>
