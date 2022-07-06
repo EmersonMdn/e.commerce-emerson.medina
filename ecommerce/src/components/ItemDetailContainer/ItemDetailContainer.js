@@ -8,6 +8,7 @@ function ItemDetailContainer() {
     const [item, setItem] = useState([]);	
     const params = useParams();
 
+<<<<<<< HEAD
 //  public key = 1c790537dc1197bee2d55d2a8c9e0282
 // private key = 14c433f1dca1815d5506fef1fcb6ce858158b835
 // ts 1
@@ -21,6 +22,12 @@ function ItemDetailContainer() {
         fetch(`https://pokeapi.co/api/v2/pokemon/${params.productId}`)
         .then((res) => res.json())
         .then((data) => setItem(data))
+=======
+    const getProductos = () => {
+        fetch(`https://pokeapi.co/api/v2/pokemon/${params.productId}`)
+        .then(res => res.json())
+        .then(data => setItem(data))
+>>>>>>> 822a9c0c55b08c96440a635825eac598b5a02fdb
         
     }
 

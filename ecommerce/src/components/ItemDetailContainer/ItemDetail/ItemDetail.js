@@ -1,5 +1,6 @@
 import './ItemDetail.css';
 
+<<<<<<< HEAD
 
 function ItemDetail(props) {
     console.log(props.productos.types)
@@ -23,6 +24,13 @@ function ItemDetail(props) {
             </div>
         </div>
     </div> );
+=======
+function ItemDetail(props) {
+    return ( 
+    <>
+         <h1>Nombre: {props.productos.name}</h1>
+    </> );
+>>>>>>> 822a9c0c55b08c96440a635825eac598b5a02fdb
 }
 
 export default ItemDetail;
