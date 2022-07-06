@@ -1,5 +1,5 @@
 import './App.css';
-import {Routes, Route, Router} from 'react-router-dom';
+import {Routes, Route } from 'react-router-dom';
 import Nav from './components/navBar/NavBar'; // Import NavBar component
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import Footer from './components/Footer/Footer';
@@ -12,7 +12,7 @@ function App() {
       <Nav />
       <Routes>
         <Route exact path='/' element={<ItemListContainer />} />
-        <Route exact path='/detail' element={<ItemDetailContainer />} />
+        <Route exact path='/productos/:productId' element={<ItemDetailContainer />} />
       </Routes>  
       <Footer />
     </div>
