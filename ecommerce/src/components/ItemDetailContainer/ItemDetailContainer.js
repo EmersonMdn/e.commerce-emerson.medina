@@ -27,7 +27,7 @@ function ItemDetailContainer() {
     useEffect(()=>{
         setTimeout(()=>{
             getProductos();
-            },2000)
+            },900)
     }, [])
 
     return ( 

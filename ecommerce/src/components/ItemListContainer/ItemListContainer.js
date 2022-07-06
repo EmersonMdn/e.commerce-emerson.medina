@@ -16,7 +16,7 @@ function ItemListContainer() {
     useEffect(()=>{
         setTimeout(()=>{
             fetchProdructos();
-            },1000)
+            },500)
     }, [])
 
    

@@ -10,7 +10,7 @@ function ItemDetail(props) {
         <div className='container row'>
 
             <div className='col-md-3'>
-                <div className='imgExample'>
+                <div className='imgExample animated-box in'>
                     <p>IMG</p>
                 </div>
             </div>
