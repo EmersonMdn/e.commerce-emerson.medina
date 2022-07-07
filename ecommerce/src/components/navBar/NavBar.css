@@ -61,5 +61,8 @@ font-family: 'Playfair Display', serif;*/
     color:  rgb(255, 166, 0);
     border-bottom: solid 2px  rgb(255, 166, 0);
     font-family: 'Poppins', sans-serif;
-    margin:0 5px;
+}
+.dropdown-item.active{
+    background-color: rgb(255, 166, 0);
+    color: #000
 }

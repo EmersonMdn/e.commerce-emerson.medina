@@ -2,24 +2,32 @@ import './ItemListContainer.css';
 import ItemList from './ItemList/ItemList';
 import React, { useEffect, useState } from 'react';
 import SliderProducts from '../SliderProducts/SliderProducts';
+import { useParams } from 'react-router-dom';
 
-function ItemListContainer() {
+function ItemListContainer({ greeting }) {
 
     const [itemValue, setItem] = useState([]);
+    const { idCategoria } = useParams();
+    console.log(idCategoria);
 
-    const fetchProdructos = () => {
-        fetch('./products.json')
-        .then((resp) => resp.json())
-        .then((data)=> setItem(data))
-    }
-
-    useEffect(()=>{
+    useEffect( () => {
         setTimeout(()=>{
-            fetchProdructos();
-            },500)
-    }, [])
+            fetch('/products.json', {
+                method: 'GET',
+                headers: {
+                   "Accept": "application/json"
+           }
+          })
+            .then((resp) => resp.json())
+            .then((data)=> {
+                setItem(idCategoria ? data.filter((item) => item.categoria === idCategoria) : data);
+                // elemento.nombre.toLowerCase().includes(valor)
+            })
+            .catch((err) => console.log(err))
+        },500)
+    }, [idCategoria]);
 
-   
+   console.log(itemValue);
 
     return ( 
         <>
@@ -27,7 +35,7 @@ function ItemListContainer() {
              <SliderProducts/>
             </div>
             <div className='container' id='ItemListContainer'>
-                <h3>Todos los productos</h3> 
+                <h3>{greeting}</h3> 
                 <ItemList productos={itemValue} />
             </div>
         </>)

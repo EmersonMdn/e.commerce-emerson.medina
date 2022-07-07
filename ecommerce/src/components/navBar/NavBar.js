@@ -5,6 +5,14 @@ import {Link, NavLink } from 'react-router-dom';
 
 
 function NavBar() {
+
+  let categorias = 
+  [
+    {id: 1, cat: 'indumentaria'},
+    {id: 2, cat: 'joyas'}
+  ];
+
+
   return (<>
     <div className="row justify-content-around" id='navbar-main'>
       <nav className="navbar navbar-expand-lg" id='home'>
@@ -18,12 +26,15 @@ function NavBar() {
               <NavLink activeclassName="active" className="nav-link" to="/"> Inicio</NavLink>
             </li>
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+              <a className="nav-link dropdown-toggle" href="#." id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
                Catálogo
-              </a>
+              </a> 
               <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a className="dropdown-item" href="#">Indumentaria</a>
-                <a className="dropdown-item" href="#">Joyas</a>
+                {categorias.map((categoria) => {
+                  return (
+                    <NavLink key={categoria.id} activeclassName="active" className="dropdown-item" to={`/categoria/${categoria.cat}`}>{categoria.cat}</NavLink>
+                  )
+                } )}
               </div>
             </li>
             <li className="nav-item dropdown">

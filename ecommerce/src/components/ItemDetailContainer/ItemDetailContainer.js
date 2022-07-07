@@ -17,7 +17,7 @@ function ItemDetailContainer() {
 
 
 
-    const getProductos = () => {
+    const getProducto = () => {
         fetch(`https://pokeapi.co/api/v2/pokemon/${params.productId}`)
         .then((res) => res.json())
         .then((data) => setItem(data))
@@ -26,7 +26,7 @@ function ItemDetailContainer() {
 
     useEffect(()=>{
         setTimeout(()=>{
-            getProductos();
+            getProducto();
             },900)
     }, [])
 

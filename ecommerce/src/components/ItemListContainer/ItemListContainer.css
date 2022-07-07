@@ -1,4 +1,10 @@
 #ItemListContainer{
     text-align: center;
     font-family: Poppins;
+    margin: auto;
+}
+
+#ItemListContainer h3{
+    padding-top: 20px ;
+    font-weight: bolder;
 }

@@ -4,7 +4,7 @@ import Nav from './components/navBar/NavBar'; // Import NavBar component
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import Footer from './components/Footer/Footer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-import ItemDetail from './components/ItemDetailContainer/ItemDetail/ItemDetail';
+
 
 
 function App() {
@@ -12,8 +12,13 @@ function App() {
     <div>
       <Nav />
       <Routes>
-        <Route exact path='/' element={<ItemListContainer />} />
+
+        <Route exact path='/' element={<ItemListContainer greeting={'Inicio'} />} />
+
+        <Route path='/categoria/:idCategoria' element={<ItemListContainer greeting={'Lista de productos'} />} />
+
         <Route exact path='/productos/:productId' element={<ItemDetailContainer />} />
+
       </Routes>  
       <Footer />
     </div>

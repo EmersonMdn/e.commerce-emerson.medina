@@ -9,6 +9,7 @@ p{
     align-items:stretch;
     padding: 2%;
     border: 1px solid rgba(41, 41, 41, 0.363);
+    z-index: 20;
 }
 .item-count p{
     margin: 0;
