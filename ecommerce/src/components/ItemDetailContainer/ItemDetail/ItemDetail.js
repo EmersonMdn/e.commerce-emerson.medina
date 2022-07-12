@@ -1,7 +1,27 @@
+import ItemCount from './ItemCount/ItemCount';
 import './ItemDetail.css';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function ItemDetail(props) {
-    console.log(props.productos.types)
+
+    const [isActive, setIsActive] = useState(true);
+    const [myCart, setMyCart] = useState([]);
+
+    /**Funcion que recibe el producto del child
+     * 
+     * @param {onCart}  
+     */
+    const onCart  = (onCart) => {
+        const onCartData = {
+            ...onCart,
+            uso: 'hola'
+        }
+        setMyCart(onCartData);
+        console.log(onCartData);
+    }
+
+
     return ( 
     <div className="detailContainer">
 
@@ -9,21 +29,40 @@ function ItemDetail(props) {
 
         <div className='container row'>
 
-            <div className='col-md-3'>
+            <div className='col-md-6 imgDetail'>
                 <div className='imgExample animated-box in'>
                     <p>IMG</p>
                 </div>
             </div>
 
-            <div className='col-md-9 details'>        
+            <div className='col-md-6 details'>        
                 <h2>{props.productos.name}</h2>
                 <h4>Habilidades: {props.productos.abilities.length}</h4>
                 <p>Peso: {props.productos.weight}kg</p>
+
+                <div className='itemCount-container'>
+                    {isActive && <ItemCount
+                    onCart={onCart}
+                    setIsActive={setIsActive}
+                    stock={props.productos.abilities.length} 
+                    name={props.productos.name} 
+                    price = {10}/>}
+
+                {/* Lleva a '/cart'  */}
+                {!isActive && <Link to={'/cart'}><p className='finish-btn'>Terminar con el pago</p></Link>}
+                </div>
+
+                {/* Simulacion de carrito */}
+                {!isActive && <div className='cartEx'>
+                    <h4>Carrito</h4>
+                    <p>Nombre: {myCart.name} <br></br>
+                Cantidad: {myCart.count}</p>
+                </div>}
             </div>
         </div>
     </div> );
 
 
-}
+} 
 
 export default ItemDetail;

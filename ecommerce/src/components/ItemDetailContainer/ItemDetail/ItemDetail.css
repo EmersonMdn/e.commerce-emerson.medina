@@ -1,5 +1,18 @@
 
-
+.imgDetail{
+  display: flex;
+  justify-content: left;
+}
+@media screen and (max-width: 568px) {
+  .imgDetail{
+    padding-bottom: 60px;
+  }
+  .details{
+    justify-content: center;
+    align-items: center;
+  }
+}
+  
 .detailContainer{
     background: rgb(63,215,251);
     background: radial-gradient(circle, rgba(63, 216, 251, 0.582) 0%, rgba(136,131,186,1) 53%, rgba(252,70,70,1) 100%);
@@ -21,6 +34,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    background-color: rgba(2, 2, 2, 0.062);
+    border-radius: 15px;
 }
 .details h2{
     text-transform: uppercase;
@@ -105,3 +121,18 @@
     }
   }
   
+
+
+.itemCount-container{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.cartEx{
+    font-weight: bold;
+    background-color: rgba(3, 173, 196, 0.164);
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}

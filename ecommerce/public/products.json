@@ -1,7 +1,7 @@
 [{
 	"id": 1,
 	"nombre": "Otis Goold",
-	"stock": 1,
+	"stock": 4,
 	"precio": "$3033.94",
 	"categoria": "joyas",
 	"img": "https://picsum.photos/200/300"
@@ -13,7 +13,7 @@
 	"categoria": "indumentaria",
 	"img": "https://picsum.photos/200"
 }, {
-	"id": 3,
+	"id": 7,
 	"nombre": "Tressa Finders",
 	"stock": 3,
 	"precio": "$3083.57",
@@ -64,35 +64,35 @@
 }, {
 	"id": 10,
 	"nombre": "Graham Reah",
-	"stock": 10,
+	"stock": 9,
 	"precio": "$2218.34",
 	"categoria" : "joyas",
 	"img": "https://robohash.org/autemetmolestias.png?size=50x50&set=set1"
 }, {
 	"id": 11,
 	"nombre": "Yvor Merrywether",
-	"stock": 11,
+	"stock": 3,
 	"precio": "$4454.66",
 	"categoria" : "joyas",
 	"img": "https://robohash.org/voluptatemsimiliqueearum.png?size=50x50&set=set1"
 }, {
 	"id": 12,
 	"nombre": "Michaella Norgate",
-	"stock": 12,
+	"stock": 2,
 	"precio": "$2944.89",
 	"categoria" : "joyas",
 	"img": "https://robohash.org/illumquiaveniam.png?size=50x50&set=set1"
 }, {
 	"id": 13,
 	"nombre": "Dolli Antoinet",
-	"stock": 13,
+	"stock": 5,
 	"precio": "$4872.14",
 	"categoria" : "indumentaria",
 	"img": "https://robohash.org/ipsamnonodio.png?size=50x50&set=set1"
 }, {
 	"id": 14,
 	"nombre": "Mabel Stephens",
-	"stock": 14,
+	"stock": 5,
 	"precio": "$2733.37",
 	"categoria" : "joyas",
 	"img": "https://robohash.org/sitdebitisquis.png?size=50x50&set=set1"
@@ -106,14 +106,14 @@
 }, {
 	"id": 16,
 	"nombre": "Trisha Redmond",
-	"stock": 16,
+	"stock": 7,
 	"precio": "$2755.04",
 	"categoria" : "indumentaria",
 	"img": "https://robohash.org/magnidictalibero.png?size=50x50&set=set1"
 }, {
 	"id": 17,
 	"nombre": "Darryl Quincey",
-	"stock": 17,
+	"stock": 3,
 	"precio": "$3956.90",
 	"categoria" : "joyas",
 	"img": "https://robohash.org/veniamaccusantiumquaerat.png?size=50x50&set=set1"

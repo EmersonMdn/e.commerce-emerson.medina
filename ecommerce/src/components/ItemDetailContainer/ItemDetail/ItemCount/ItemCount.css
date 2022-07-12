@@ -34,6 +34,7 @@ p{
     border-radius: 5px;
     padding: 0 15px;
     width: 100%;
+    cursor: pointer;
 }
 .addCart-btn:hover{
     color: white;
@@ -44,4 +45,12 @@ p{
 
 .addCart{
     padding: 10px;
+}
+
+.finish-btn{
+    padding: 10px;
+    background-color: rgb(60, 61, 61);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
 }
