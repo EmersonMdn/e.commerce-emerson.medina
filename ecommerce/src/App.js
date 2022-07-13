@@ -10,7 +10,7 @@ import CartDetail from './components/CartDetail/CartDetail';
 
 function App() {
   return (
-    <div>
+    <>
       <Nav />
       <Routes>
 
@@ -24,7 +24,7 @@ function App() {
 
       </Routes>  
       <Footer />
-    </div>
+    </>
       
   );
 }

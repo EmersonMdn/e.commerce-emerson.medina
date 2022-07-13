@@ -18,7 +18,7 @@ font-family: 'Playfair Display', serif;*/
     font-family: 'Poppins', sans-serif;
 }
 .nav-link:hover{
-    color: rgb(248, 203, 2);
+    color: rgba(113, 247, 4, 0.863);
     box-shadow: 0px 0 10px 0 rgba(253, 207, 0, 0.226);
 }
 
@@ -33,8 +33,8 @@ font-family: 'Playfair Display', serif;*/
     color: rgb(34, 36, 36);
 }
 .navbar-brand:hover{
-    color: rgb(253, 207, 0);
-    box-shadow: 0px 0 10px 0 rgba(253, 207, 0, 0.842);
+    color: rgba(113, 247, 4, 0.863);
+    box-shadow: 0px 0 10px 0 rgba(113, 247, 4, 0.863);
     border: 2px solid rgba(253, 207, 0, 0.253);
     background-color: rgb(14, 14, 14);
 }
@@ -51,18 +51,19 @@ font-family: 'Playfair Display', serif;*/
 }
 
 .text-descuento{
-    background-color: rgb(255, 166, 0);
-    color: rgb(255, 255, 164);
+    background-color: rgba(113, 247, 4, 0.863);
+    color: rgb(26, 26, 25);
     text-align: center;
     margin: 0;
+    font-weight:600;
 }
 
 .active{
-    color:  rgb(255, 166, 0);
-    border-bottom: solid 2px  rgb(255, 166, 0);
+    color:  rgba(113, 247, 4, 0.863);
+    border-bottom: solid 2px rgba(113, 247, 4, 0.863);
     font-family: 'Poppins', sans-serif;
 }
 .dropdown-item.active{
-    background-color: rgb(255, 166, 0);
+    background-color: rgba(113, 247, 4, 0.863);
     color: #000
 }

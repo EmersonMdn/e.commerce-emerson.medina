@@ -10,10 +10,11 @@ function Item(props) {
             <div className='item'>
                 <Link to ={ `/productos/${props.id}`} >
                 <h4>{props.nombre}</h4>
-                <img className='img-item' src= {props.img}  alt= {props.nombre} /> </Link>
+                <img className='img-item' src= {props.img}  alt= {props.nombre} /> 
                 <p className='precio'>Precio: {props.precio}</p>
-                
-                <ItemCount stock={props.stock} />
+
+                <h4 className='ver-mas'>Ver detalles</h4>
+                </Link>
             </div> 
         </>);
 }
