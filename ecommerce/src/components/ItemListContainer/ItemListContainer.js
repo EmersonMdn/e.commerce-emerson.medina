@@ -27,8 +27,6 @@ function ItemListContainer({ greeting }) {
         },500)
     }, [idCategoria]);
 
-   console.log(itemValue);
-
     return ( 
         <>
             <div className="container-slide">

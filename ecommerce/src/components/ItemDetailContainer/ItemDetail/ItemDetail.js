@@ -1,12 +1,16 @@
 import ItemCount from './ItemCount/ItemCount';
 import './ItemDetail.css';
-import React, { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { CartContext, CartProvider } from '../../../contex/cartContex';
 
 function ItemDetail(props) {
 
     const [isActive, setIsActive] = useState(true);
     const [myCart, setMyCart] = useState([]);
+
+
+    const {addToCart} = useContext(CartContext);
 
     /**Funcion que recibe el producto del child
      * 
@@ -18,7 +22,7 @@ function ItemDetail(props) {
             uso: 'hola'
         }
         setMyCart(onCartData);
-        console.log(onCartData);
+        addToCart(onCartData, onCartData.count);
     }
 
 
