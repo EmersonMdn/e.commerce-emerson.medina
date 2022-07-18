@@ -9,29 +9,32 @@ export const CartProvider = ({defaultValue = [], children}) => {
 
     const [cart, setCart] = useState(defaultValue);
 
-    const addToCart = (product, quantity) => {
+    const addToCart = (product, count) => {
         
         if (isInCart(product.id)){
             const newCart = [...cart];
-            for(const item of newCart){
-                if(item.id === product.id){
-                    item.count += quantity;
+            for(const element of newCart){
+                if(element.item.id === product.id){
+                    element.cant += count;
                 }
             }
+
             setCart(newCart);
 
         } else {
             setCart(
                 [
-                    ...cart,
-                    {
-                        item: product,
-                        quantity: quantity
-                    }
+                   ...cart,
+                   {item: product,
+                    cant: count}
                 ]
             )
         } 
-        
+        console.log(cart);
+    }
+
+    const isInCart = (id) => {
+        return cart.find(elem => elem.item.id === id);
     }
 
     const removeFromCart = (product, quantity) => {
@@ -43,9 +46,6 @@ export const CartProvider = ({defaultValue = [], children}) => {
         setCart([]);
     }
 
-    const isInCart = (product) => {
-        return cart.find(item => item.item.id === product.id);
-    }
 
     const contex = {
         cart,
@@ -56,7 +56,6 @@ export const CartProvider = ({defaultValue = [], children}) => {
     }
 
     return (
-
         <Provider value={contex}>
             {children}
         </Provider>

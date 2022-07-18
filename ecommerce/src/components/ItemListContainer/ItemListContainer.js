@@ -8,7 +8,6 @@ function ItemListContainer({ greeting }) {
 
     const [itemValue, setItem] = useState([]);
     const { idCategoria } = useParams();
-    console.log(idCategoria);
 
     useEffect( () => {
         setTimeout(()=>{

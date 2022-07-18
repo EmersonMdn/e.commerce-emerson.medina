@@ -20,16 +20,7 @@ function ItemCount(props) {
  
     const onAdd = () => {
         props.setIsActive(false);
-        
-        const cartData = {
-            name: props.name,
-            price: props.price,
-            count: valor,
-            id: Math.random().toString()
-          };
-      
-          props.onCart(cartData);
-      
+        props.onCart(valor)
     }
 
     return ( 

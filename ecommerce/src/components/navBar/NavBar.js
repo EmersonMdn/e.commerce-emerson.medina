@@ -1,4 +1,3 @@
-
 import CartWidget from './CartWidget/CartWidget';
 import './NavBar.css';
 import {Link, NavLink } from 'react-router-dom';
@@ -23,7 +22,8 @@ function NavBar() {
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
           <li className="nav-item">
-              <NavLink activeclassName="active" className="nav-link" to="/"> Inicio</NavLink>
+              {/* <NavLink activeclassName="active" className="nav-link" to="/"> Inicio</NavLink> */}
+              <NavLink className={(navData) => (navData.isActive ? "nav-link active" : 'nav-link')} to="/"> Inicio</NavLink>
             </li>
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#." id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -32,7 +32,7 @@ function NavBar() {
               <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 {categorias.map((categoria) => {
                   return (
-                    <NavLink key={categoria.id} activeclassName="active" className="dropdown-item" to={`/categoria/${categoria.cat}`}>{categoria.cat}</NavLink>
+                    <NavLink key={categoria.id} className={(navData) => (navData.isActive ? "dropdown-item active" : 'dropdown-item')}  to={`/categoria/${categoria.cat}`}>{categoria.cat}</NavLink>
                   )
                 } )}
               </div>

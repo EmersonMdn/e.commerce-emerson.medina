@@ -1,6 +1,6 @@
 import './Item.css';
 import React from 'react';
-import ItemCount from '../../../ItemDetailContainer/ItemDetail/ItemCount/ItemCount';
+// import ItemCount from '../../../ItemDetailContainer/ItemDetail/ItemCount/ItemCount';
 import { Link } from 'react-router-dom';
 
 

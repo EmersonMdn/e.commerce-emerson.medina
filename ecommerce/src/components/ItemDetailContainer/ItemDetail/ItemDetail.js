@@ -2,7 +2,7 @@ import ItemCount from './ItemCount/ItemCount';
 import './ItemDetail.css';
 import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { CartContext, CartProvider } from '../../../contex/cartContex';
+import { CartContext } from '../../../contex/cartContex';
 
 function ItemDetail(props) {
 
@@ -12,17 +12,13 @@ function ItemDetail(props) {
 
     const {addToCart} = useContext(CartContext);
 
-    /**Funcion que recibe el producto del child
-     * 
-     * @param {onCart}  
-     */
-    const onCart  = (onCart) => {
+    
+    const onCart  = (count) => {
         const onCartData = {
             ...onCart,
-            uso: 'hola'
         }
-        setMyCart(onCartData);
-        addToCart(onCartData, onCartData.count);
+        setMyCart([onCartData]);
+        addToCart(props.productos, count);
     }
 
 
@@ -50,18 +46,13 @@ function ItemDetail(props) {
                     setIsActive={setIsActive}
                     stock={props.productos.abilities.length} 
                     name={props.productos.name} 
-                    price = {10}/>}
+                    price = {10}
+                    id={props.productos.id}
+                    key={props.productos.id} />}
 
-                {/* Lleva a '/cart'  */}
-                {!isActive && <Link to={'/cart'}><p className='finish-btn'>Terminar con el pago</p></Link>}
+                    {/* Lleva a '/cart'  */}
+                    {!isActive && <Link to={'/cart'}><p className='finish-btn'>Terminar con el pago</p></Link>}
                 </div>
-
-                {/* Simulacion de carrito */}
-                {!isActive && <div className='cartEx'>
-                    <h4>Carrito</h4>
-                    <p>Nombre: {myCart.name} <br></br>
-                Cantidad: {myCart.count}</p>
-                </div>}
             </div>
         </div>
     </div> );

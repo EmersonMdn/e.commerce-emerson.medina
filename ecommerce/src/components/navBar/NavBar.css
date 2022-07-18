@@ -17,8 +17,12 @@ font-family: 'Playfair Display', serif;*/
 .dropdown-item{
     font-family: 'Poppins', sans-serif;
 }
+.dropdown-item:active{
+    background-color: rgba(0, 0, 0, 0.26);
+    color: aliceblue;
+}
 .nav-link:hover{
-    color: rgba(113, 247, 4, 0.863);
+    color: rgb(30, 148, 0);
     box-shadow: 0px 0 10px 0 rgba(253, 207, 0, 0.226);
 }
 
@@ -33,9 +37,9 @@ font-family: 'Playfair Display', serif;*/
     color: rgb(34, 36, 36);
 }
 .navbar-brand:hover{
-    color: rgba(113, 247, 4, 0.863);
+    color: rgb(30, 148, 0);
     box-shadow: 0px 0 10px 0 rgba(113, 247, 4, 0.863);
-    border: 2px solid rgba(253, 207, 0, 0.253);
+    border: 2px solid;
     background-color: rgb(14, 14, 14);
 }
 .logolumo{
@@ -51,7 +55,7 @@ font-family: 'Playfair Display', serif;*/
 }
 
 .text-descuento{
-    background-color: rgba(113, 247, 4, 0.863);
+    background-color: rgb(30, 148, 0);
     color: rgb(26, 26, 25);
     text-align: center;
     margin: 0;
@@ -59,11 +63,11 @@ font-family: 'Playfair Display', serif;*/
 }
 
 .active{
-    color:  rgba(113, 247, 4, 0.863);
-    border-bottom: solid 2px rgba(113, 247, 4, 0.863);
+    color:  rgb(30, 148, 0);
+    border-bottom: solid 2px rgb(30, 148, 0);
     font-family: 'Poppins', sans-serif;
 }
 .dropdown-item.active{
-    background-color: rgba(113, 247, 4, 0.863);
+    background-color: rgb(30, 148, 0);
     color: #000
 }
