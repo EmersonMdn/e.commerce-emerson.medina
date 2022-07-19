@@ -7,17 +7,12 @@ import { CartContext } from '../../../contex/cartContex';
 function ItemDetail(props) {
 
     const [isActive, setIsActive] = useState(true);
-    const [myCart, setMyCart] = useState([]);
 
 
-    const {addToCart} = useContext(CartContext);
+    const { addToCart } = useContext(CartContext);
 
     
     const onCart  = (count) => {
-        const onCartData = {
-            ...onCart,
-        }
-        setMyCart([onCartData]);
         addToCart(props.productos, count);
     }
 
@@ -45,9 +40,6 @@ function ItemDetail(props) {
                     onCart={onCart}
                     setIsActive={setIsActive}
                     stock={props.productos.abilities.length} 
-                    name={props.productos.name} 
-                    price = {10}
-                    id={props.productos.id}
                     key={props.productos.id} />}
 
                     {/* Lleva a '/cart'  */}

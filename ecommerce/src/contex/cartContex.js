@@ -10,7 +10,7 @@ export const CartProvider = ({defaultValue = [], children}) => {
     const [cart, setCart] = useState(defaultValue);
 
     const addToCart = (product, count) => {
-        
+
         if (isInCart(product.id)){
             const newCart = [...cart];
             for(const element of newCart){
@@ -37,13 +37,34 @@ export const CartProvider = ({defaultValue = [], children}) => {
         return cart.find(elem => elem.item.id === id);
     }
 
-    const removeFromCart = (product, quantity) => {
-        const newCart = [...cart].filter (item => item.item.id !== product.id);
+    const removeFromCart = (productId) => {
+        const newCart = [...cart].filter(element => element.item.id !== productId);
         setCart(newCart);
+        console.log('Eliminado')
     }
 
     const clearCart = () => {
         setCart([]);
+    }
+
+    const getQuantity = () => {
+        let cantidad = 0;
+
+        cart.forEach(element => {
+            cantidad += element.cant;
+        })
+        console.log(cantidad);
+        return cantidad; 
+    }
+
+    const getTotal = () => {
+        let total = 0;
+
+        cart.forEach(element => {
+            total += element.item.height * element.cant;
+        })
+        // console.log(`Total: ${total}`);
+        return total;
     }
 
 
@@ -52,7 +73,9 @@ export const CartProvider = ({defaultValue = [], children}) => {
         addToCart,
         clearCart,
         isInCart,
-        removeFromCart
+        removeFromCart,
+        getQuantity,
+        getTotal
     }
 
     return (
