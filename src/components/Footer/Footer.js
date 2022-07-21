@@ -9,10 +9,10 @@ function Footer() {
             <div className='col-md-4 table-ftr table-izq'>
                 Redes sociales
                 <ul className='list-group'>
-                    <li className='list-group-item'><a href='#home'>Facebook</a></li>
-                    <li className='list-group-item'><a href='#home'>Facebook</a></li>
-                    <li className='list-group-item'><a href='#home'>Facebook</a></li>
-                    <li className='list-group-item'><a href='#home'>Facebook</a></li>
+                    <li className='list-group-item footer-list'><a href='#home'>Facebook</a></li>
+                    <li className='list-group-item footer-list'><a href='#home'>Facebook</a></li>
+                    <li className='list-group-item footer-list'><a href='#home'>Facebook</a></li>
+                    <li className='list-group-item footer-list'><a href='#home'>Facebook</a></li>
                 </ul>
             </div>
 

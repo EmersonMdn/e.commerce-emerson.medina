@@ -1,20 +1,14 @@
-.clear-btn {
-  background-color: #ff0000;
-  color: #fff;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 14px;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: 500;
+.cartDetails .order-container {
+  font-family: poppins; 
+  padding: 20px 0 0 0;
+  color: rgb(0, 0, 0);
+  text-align: center;
 }
 
-.table-container {
-    width: 100%;
-    padding-top: 10px;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+.order-container {
+  padding: 0 ;
+  font-family: poppins; 
+  color: rgb(0, 0, 0);
+  text-align: center;
 }
+

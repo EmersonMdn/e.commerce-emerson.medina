@@ -13,7 +13,7 @@ font-family: 'Poppins', sans-serif;*/
     font-family: 'Poppins', sans-serif;
 }
 
-.list-group-item{
+.list-group .footer-list{
     background-color:transparent;
     border: none;
 }

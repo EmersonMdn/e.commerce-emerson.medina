@@ -1,0 +1,17 @@
+.form-buyer-info {
+  background-color: rgba(255, 255, 255, 0.073);
+  margin: 20px 0;
+  padding: 20px ;
+  font-family: poppins;
+}
+.submitOrder{
+    background-color: rgb(255, 166, 0);
+    padding: 10px;
+    border-radius: 5px;
+    color: rgb(15, 15, 15);
+    border: none;
+}
+.cart-container{
+  background-color: rgb(229, 226, 226);
+  color: rgb(15, 15, 15);
+}

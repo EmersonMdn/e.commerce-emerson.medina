@@ -1,0 +1,13 @@
+.dropdown-orders{
+    padding: 4px;
+    background-color: rgb(214, 213, 213);
+}
+
+.oncart-btn{
+    border: 2px solid rgba(0, 0, 0, 0.97);
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+}

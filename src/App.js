@@ -4,8 +4,8 @@ import Nav from './components/navBar/NavBar'; // Import NavBar component
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import Footer from './components/Footer/Footer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-import CartDetail from './components/CartDetail/CartDetail';
 import { CartProvider} from './contex/cartContex';
+import CartDetailContainer from './components/CartDetailContainer/CartDetailContainer';
 
 
 
@@ -22,7 +22,7 @@ function App() {
 
         <Route exact path='/productos/:productId' element={<ItemDetailContainer />} />
 
-        <Route exact path='/cart' element={<CartDetail/>} />
+        <Route exact path='/cart' element={<CartDetailContainer/>} />
 
       </Routes>  
       <Footer />

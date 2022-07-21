@@ -27,7 +27,7 @@ p{
 
 .addCart-btn{
     background-color: rgb(255, 166, 0);
-    color: white;
+    color: rgb(10, 10, 10);
     font-size: 17px;
     border-bottom: 4px solid rgb(255, 145, 0);
     border-right:3px solid rgb(255, 145, 0) ;
@@ -37,10 +37,7 @@ p{
     cursor: pointer;
 }
 .addCart-btn:hover{
-    color: white;
-    border-bottom: 6px solid rgb(255, 145, 0);
-    border-radius: 5px;
-    text-decoration: none;
+    color: rgba(22, 22, 22, 0.896);
 }
 
 .addCart{
@@ -48,9 +45,11 @@ p{
 }
 
 .finish-btn{
+    background-color: rgb(255, 166, 0);
     padding: 10px;
-    background-color: rgb(60, 61, 61);
-    color: white;
     border-radius: 5px;
-    cursor: pointer;
+    color: rgb(15, 15, 15);
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
 }

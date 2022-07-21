@@ -21,14 +21,18 @@
 }
 
 .imgExample{
-    height: 200px;
-    width: 200px;
+    height: 270px;
+    width: 270px;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgba(75, 75, 75, 0.459);
     color: #000;
+}
+.imgExample img{
+    height: 100%;
+    width: 100%;
 }
 .details{
     display: flex;
@@ -44,7 +48,7 @@
 }
 
 .detail-h1{
-    color: rgba(233, 233, 233, 0.397);
+    color: rgba(39, 6, 6, 0.774);
     font-weight: bolder;
     text-align: center;
 }
@@ -53,7 +57,7 @@
 
 .animated-box {
     color: #ffffff;
-    padding: 30px;
+    padding: 10px;
     text-align: center;
     border-radius: 4px;
   }
@@ -81,6 +85,7 @@
     right: 0;
     bottom: 0;
     border-radius: 4px;
+    /* background: linear-gradient(rgb(93, 223, 95) 0%, rgb(56, 171, 18) 53%, rgb(75, 235, 128) 100%); */
     background: linear-gradient(rgb(255, 73, 1) 0%, rgb(255, 252, 93) 53%, rgba(252,70,70,1) 100%);
     background-size: 300% 300%;
     clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 3px), 3px calc(100% - 3px), 3px 100%, 100% 100%, 100% 0%, 0% 0%);
@@ -136,3 +141,15 @@
     padding: 10px;
     border-radius: 5px;
 }
+
+.volver-btn{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.403);
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+}	
