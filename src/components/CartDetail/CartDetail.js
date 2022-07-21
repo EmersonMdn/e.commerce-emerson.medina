@@ -1,5 +1,5 @@
 import './CartDetail.css';
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { CartContext } from '../../contex/cartContex';
 import CardItem from './CartItem/CartItem';
 
@@ -13,11 +13,11 @@ function CartDetail() {
         {(cart.length < 1) && <h1>No hay productos en el carrito</h1>}
         {cart && (cart.map((item) =>
             <CardItem 
-                name={item.item.name}
+            nombre={item.item.nombre}
                 key={item.item.id}
                 id={item.item.id}
                 cantidad={item.cant}
-                price={item.item.height}
+                precio={item.item.precio}
                 total={totalPrecio}/>
         ))}
 

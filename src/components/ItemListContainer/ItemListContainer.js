@@ -3,27 +3,31 @@ import ItemList from './ItemList/ItemList';
 import React, { useEffect, useState } from 'react';
 import SliderProducts from '../SliderProducts/SliderProducts';
 import { useParams } from 'react-router-dom';
+import { collection, getDocs, getFirestore} from 'firebase/firestore';
 
 function ItemListContainer({ greeting }) {
 
     const [itemValue, setItem] = useState([]);
     const { idCategoria } = useParams();
 
+    const db = getFirestore()
+
+    const getProducts = async () => {
+        const productRef = (collection(db, 'productos'));
+        const docSnap = await getDocs(productRef);
+
+        const dataProducts = docSnap.docs.map(producto => {
+            const items = {...producto.data(),
+                id: producto.id,};
+                return items
+        })
+        return dataProducts;
+    }
+
     useEffect( () => {
-        setTimeout(()=>{
-            fetch('/products.json', {
-                method: 'GET',
-                headers: {
-                   "Accept": "application/json"
-           }
-          })
-            .then((resp) => resp.json())
-            .then((data)=> {
-                setItem(idCategoria ? data.filter((item) => item.categoria === idCategoria) : data);
-                // elemento.nombre.toLowerCase().includes(valor)
-            })
-            .catch((err) => console.log(err))
-        },500)
+        getProducts().then(data => {
+            console.log(data)
+            setItem(idCategoria ? data.filter((item) => item.categoria === idCategoria) : data)})
     }, [idCategoria]);
 
     return ( 

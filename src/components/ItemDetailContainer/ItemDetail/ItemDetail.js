@@ -26,24 +26,24 @@ function ItemDetail(props) {
 
             <div className='col-md-6 imgDetail'>
                 <div className='imgExample animated-box in'>
-                    <p>IMG</p>
+                    <img src={props.productos.img} alt={props.productos.nombre}/>
                 </div>
             </div>
 
             <div className='col-md-6 details'>        
-                <h2>{props.productos.name}</h2>
-                <h4>Habilidades: {props.productos.abilities.length}</h4>
-                <p>Peso: {props.productos.weight}kg</p>
+                <h2>{props.productos.nombre}</h2>
+                <h4>Categoria: {props.productos.categoria}</h4>
+                <p>En stock: {props.productos.stock}kg</p>
 
                 <div className='itemCount-container'>
                     {isActive && <ItemCount
                     onCart={onCart}
                     setIsActive={setIsActive}
-                    stock={props.productos.abilities.length} 
+                    stock={props.productos.stock} 
                     key={props.productos.id} />}
 
-                    {/* Lleva a '/cart'  */}
-                    {!isActive && <Link to={'/cart'}><p className='finish-btn'>Terminar con el pago</p></Link>}
+                {/* Lleva a '/cart'  */}
+                {!isActive && <Link to={'/cart'}><p className='finish-btn'>Terminar con el pago</p></Link>}
                 </div>
             </div>
         </div>

@@ -5,7 +5,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import Footer from './components/Footer/Footer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import CartDetail from './components/CartDetail/CartDetail';
-import { CartContext, CartProvider} from './contex/cartContex';
+import { CartProvider} from './contex/cartContex';
 
 
 

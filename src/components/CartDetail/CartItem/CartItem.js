@@ -5,7 +5,7 @@ function CardItem(props) {
 
     const { removeFromCart } = useContext(CartContext);
 
-    let precio  = props.price * props.cantidad;
+    let precio  =( props.precio * props.cantidad).toFixed(2);
 
     return ( 
     <div className='table-item'>
@@ -21,7 +21,7 @@ function CardItem(props) {
             <tbody>
                 <tr>
                 <th scope="row">{props.cantidad}</th>
-                <td>{props.name}</td>
+                <td>{props.nombre}</td>
                 <td>{precio}</td>
                 <td onClick={removeFromCart}>Eliminar</td>
                 </tr>

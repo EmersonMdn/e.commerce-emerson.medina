@@ -2,39 +2,37 @@ import ItemDetail from './ItemDetail/ItemDetail';
 import './ItemDetailContainer.css';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { collection, doc, getFirestore, getDoc } from 'firebase/firestore';
 
 
 
 function ItemDetailContainer() {
-
+ 
     const [item, setItem] = useState([]);	
-    const params = useParams();
 
-//  public key = 1c790537dc1197bee2d55d2a8c9e0282
-// private key = 14c433f1dca1815d5506fef1fcb6ce858158b835
-// ts 1
-// 1c790537dc1197bee2d55d2a8c9e028214c433f1dca1815d5506fef1fcb6ce858158b835
+    const { productId } = useParams();
 
-// hash = 5327d1e311189350c6d2b29de6983850
+    const db = getFirestore()
 
+    const getProduct = async (id) => {
+        const productCollectionRef = collection(db, 'productos');
+        const docRef = doc(productCollectionRef, id);
 
+        const docSnap = await getDoc(docRef);
 
-    const getProducto = () => {
-        fetch(`https://pokeapi.co/api/v2/pokemon/${params.productId}`)
-        .then((res) => res.json())
-        .then((data) => setItem(data))
-        
+        return docSnap.data();
     }
 
-    useEffect(()=>{
-        setTimeout(()=>{
-            getProducto();
-            },900)
-    }, [])
+    useEffect( () => {
+        getProduct(productId)
+        .then((data) => {
+            console.log(data)
+            setItem(data)})
+    }, [productId]);
 
     return ( 
     <>
-        {item.length !== 0 && <ItemDetail productos={item} />}
+        <ItemDetail productos={item} />
     </> );
 }
 
