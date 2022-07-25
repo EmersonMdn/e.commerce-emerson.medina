@@ -20,9 +20,11 @@ function App() {
 
         <Route path='/categoria/:idCategoria' element={<ItemListContainer greeting={'Lista de productos'} />} />
 
-        <Route exact path='/productos/:productId' element={<ItemDetailContainer />} />
+        <Route path='/productos/:productId' element={<ItemDetailContainer />} />
 
-        <Route exact path='/cart' element={<CartDetailContainer/>} />
+        <Route path='/cart' element={<CartDetailContainer/>} />
+        
+        <Route path='/*' element={<ItemListContainer/>} />
 
       </Routes>  
       <Footer />
