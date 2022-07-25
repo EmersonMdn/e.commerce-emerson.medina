@@ -11,7 +11,7 @@ function CartDetailContainer() {
       <div className="container cart-container">
         <div className="row">
           <div className="col-md-8 form-buyer-info">
-            <form>
+            <form onSubmit={()=> alert('Compra finalizada')}>
               <div className="form-row">
                 <div className="form-group col-md-12">
                   <label for="inputEmail4">Correo electronico</label>
@@ -55,7 +55,7 @@ function CartDetailContainer() {
                 </div>
               </div>
 
-              <button className="submitOrder">Comprar</button>
+              <button type='submit' className="submitOrder" >Comprar</button>
             </form>
           </div>
 
