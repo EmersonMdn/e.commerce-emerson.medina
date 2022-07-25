@@ -27,6 +27,7 @@ function CartDetail() {
 
       <p>
         <strong>Total: $ {totalPrecio}</strong>
+        
       </p>
     </div>
   );

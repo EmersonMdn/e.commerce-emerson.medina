@@ -2,7 +2,7 @@
   font-family: poppins; 
   padding: 20px 0 0 0;
   color: rgb(0, 0, 0);
-  text-align: center;
+
 }
 
 .order-container {
@@ -10,5 +10,6 @@
   font-family: poppins; 
   color: rgb(0, 0, 0);
   text-align: center;
+  width: 100%;
 }
 

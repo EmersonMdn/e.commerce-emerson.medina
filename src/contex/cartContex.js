@@ -28,9 +28,8 @@ export const CartProvider = ({ defaultValue = [], children }) => {
   };
 
   const removeFromCart = (productId) => {
-    const newCart = [...cart].filter(
-      (element) => element.item.id !== productId
-    );
+    const newCart = 
+    [...cart].filter( (element) => element.item.id !== productId);
     setCart(newCart);
     console.log("Eliminado");
   };
@@ -71,9 +70,3 @@ export const CartProvider = ({ defaultValue = [], children }) => {
 
   return <Provider value={contex}>{children}</Provider>;
 };
-
-// function CartContex() {
-//     return ( <></> );
-// }
-
-// export default CartContex;

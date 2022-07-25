@@ -75,7 +75,7 @@ function NavBar() {
                   })}
                 </div>
               </li>
-              <li className="nav-item dropdown">
+              <li className="nav-item dropdown cartWidget">
                 <CartWidget />
               </li>
             </ul>

@@ -1,5 +1,25 @@
 .list-group-item{
-    padding: 0 10px;
+    padding: 10px;
     border: 1px solid rgba(5, 5, 5, 0.129);
     font-size: 17px;
+    width: 100%;
+}
+
+.priceStyle{
+    right: 0;
+    color:rgb(0, 0, 0);
+    text-align: right;
+}
+
+.eliminarItem{
+    border: none;
+    background-color: rgb(227, 6, 6);
+    padding:0px 5px ;
+    border-radius: 5px;
+    color: aliceblue;
+}
+.eliminarItem:hover{
+    background-color: rgba(0, 0, 0, 0.71);
+    color: aliceblue;
+    border-radius: 100% ;
 }

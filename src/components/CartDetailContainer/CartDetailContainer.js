@@ -2,6 +2,7 @@ import CartDetail from "../CartDetail/CartDetail";
 import "./CartDetailContainer.css";
 import { CartContext } from "../../contex/cartContex";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 function CartDetailContainer() {
   const { clearCart } = useContext(CartContext);
@@ -60,6 +61,15 @@ function CartDetailContainer() {
 
           <div className="col-md-4 cartDetails">
             <CartDetail />
+
+            <div className="botones">
+              <button className="vaciar-carro" onClick={clearCart}>
+                Vaciar carro
+              </button>
+              <Link to={"/"} className="volver">
+                Volver
+              </Link>
+            </div>
           </div>
         </div>
       </div>

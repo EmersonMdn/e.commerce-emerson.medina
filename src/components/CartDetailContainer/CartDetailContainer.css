@@ -15,3 +15,33 @@
   background-color: rgb(229, 226, 226);
   color: rgb(15, 15, 15);
 }
+
+.botones{
+  padding:30px 10px;
+}
+.vaciar-carro{
+  background-color: rgb(61, 61, 61); 
+  padding: 10px;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  border: none;
+}
+.vaciar-carro:active{
+  background-color: rgb(30, 148, 0);
+  color: rgb(255, 255, 255);
+}
+.volver{
+  background-color: rgb(61, 61, 61);
+  padding: 11px;
+  margin: 11px;
+  border-radius: 5px;
+  color: rgb(245, 244, 244);
+  border: none;
+}
+.volver:active{
+  background-color: rgb(30, 148, 0);
+  color: rgb(255, 255, 255);
+}
+.volver:hover{
+  color: rgb(255, 255, 255);
+}
