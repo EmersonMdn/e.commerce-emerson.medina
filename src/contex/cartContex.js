@@ -20,7 +20,6 @@ export const CartProvider = ({ defaultValue = [], children }) => {
     } else {
       setCart([...cart, { item: product, cant: count }]);
     }
-    console.log(cart);
   };
 
   const isInCart = (id) => {
@@ -31,7 +30,6 @@ export const CartProvider = ({ defaultValue = [], children }) => {
     const newCart = 
     [...cart].filter( (element) => element.item.id !== productId);
     setCart(newCart);
-    console.log("Eliminado");
   };
 
   const clearCart = () => {

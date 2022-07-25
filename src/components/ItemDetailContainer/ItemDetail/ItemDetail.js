@@ -49,7 +49,7 @@ function ItemDetail(props) {
                   </Link>
                   <Link to={"/"}>
                     <p className="volver-btn">
-                      <i class="fa-regular fa-circle-left"></i> Seguir comprando
+                      <i className="fa-regular fa-circle-left"></i> Seguir comprando
                     </p>
                   </Link>
                 </div>

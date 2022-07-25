@@ -26,7 +26,6 @@ function ItemDetailContainer() {
     useEffect( () => {
         getProduct(productId)
         .then((data) => {
-            console.log(data)
             setItem(data)})
     }, [productId]);
 

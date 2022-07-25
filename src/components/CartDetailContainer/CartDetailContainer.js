@@ -14,7 +14,7 @@ function CartDetailContainer() {
             <form onSubmit={()=> alert('Compra finalizada')}>
               <div className="form-row">
                 <div className="form-group col-md-12">
-                  <label for="inputEmail4">Correo electronico</label>
+                  <label>Correo electronico</label>
                   <input
                     type="email"
                     className="form-control"
@@ -23,7 +23,7 @@ function CartDetailContainer() {
                 </div>
               </div>
               <div className="form-group">
-                <label for="inputAddress">Direccion</label>
+                <label>Direccion</label>
                 <input
                   type="text"
                   className="form-control"
@@ -33,23 +33,23 @@ function CartDetailContainer() {
               </div>
               <div className="form-row">
                 <div className="form-group col-md-6">
-                  <label for="inputCity">Provincia</label>
+                  <label >Provincia</label>
                   <input type="text" className="form-control" id="inputCity" />
                 </div>
                 <div className="form-group col-md-3">
-                  <label for="inputZip">Codigo postal</label>
+                  <label>Codigo postal</label>
                   <input type="text" className="form-control" id="inputZip" />
                 </div>
               </div>
 
-              <div class="form-group">
-                <div class="form-check">
+              <div className="form-group">
+                <div className="form-check">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="checkbox"
                     id="gridCheck"
                   />
-                  <label class="form-check-label" for="gridCheck">
+                  <label className="form-check-label">
                     Acepto los terminos y condiciones
                   </label>
                 </div>

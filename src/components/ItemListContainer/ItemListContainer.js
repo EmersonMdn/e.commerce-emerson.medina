@@ -26,7 +26,6 @@ function ItemListContainer({ greeting }) {
 
     useEffect( () => {
         getProducts().then(data => {
-            console.log(data)
             setItem(idCategoria ? data.filter((item) => item.categoria === idCategoria) : data)})
     }, [idCategoria]);
 
