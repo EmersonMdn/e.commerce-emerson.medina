@@ -4,6 +4,15 @@
     overflow: hidden;
     font-family: 'Poppins', sans-serif;
     color: #fff;
-    background-color: rgba(7, 7, 7, 0.836);
+    background-color: rgba(127, 116, 116, 0.37);
 }
 
+
+.container-slide{
+    background-image: url('https://images.unsplash.com/photo-1583997052301-0042b33fc598?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: -0 -190px;
+    height: 320px;
+    padding-top: 20px;
+}
