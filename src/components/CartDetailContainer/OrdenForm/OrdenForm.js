@@ -1,11 +1,47 @@
+import Swal from "sweetalert2";
+
 import { getFirestore, collection, addDoc } from "firebase/firestore";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CartContext } from "../../../contex/cartContex";
 
 function OrdenForm() {
   const { cart, getTotal } = useContext(CartContext);
 
+  const { nombre, setNombre } = useState("");
+  const { documento, setDocumento } = useState(0);
+  const { telefono, setTelefono } = useState(0);
+  const { email, setEmail } = useState("");
+  const { direccion, setDireccion } = useState("");
+  const { provincia, setProvincia } = useState("");
+  const { localidad, setLocalidad } = useState("");
+  const { codigoPostal, setCP } = useState(0);
+
   let precioTotal = getTotal().toFixed(2);
+
+  const nombreHandler = (e) => {
+    setNombre(e.target.value);
+  };
+  const documentoHandler = (e) => {
+    setDocumento(e.target.value);
+  };
+  const telefonoHandler = (e) => {
+    setTelefono(e.target.value);
+  };
+  const emailHandler = (e) => {
+    setEmail(e.target.value);
+  };
+  const direccionHandler = (e) => {
+    setDireccion(e.target.value);
+  };
+  const provinciaHandler = (e) => {
+    setProvincia(e.target.value);
+  };
+  const localidadHandler = (e) => {
+    setLocalidad(e.target.value);
+  };
+  const cpHandler = (e) => {
+    setCP(e.target.value);
+  };
 
   const nuevaOrden = () => {
     let fecha = new Date();
@@ -18,15 +54,15 @@ function OrdenForm() {
 
     const orden = {
       comprador: {
-        nombre: "Juan",
-        email: "uno@goam.com",
-        documento: "65456746",
-        telefono: "12345678",
+        nombre: nombre,
+        email: email,
+        documento: documento,
+        telefono: telefono,
         ubicacion: {
-          direccion: "calle falsa 123",
-          provincia: "Buenos Aires",
-          localidad: "CABA",
-          codigoPostal: "5345",
+          direccion: direccion,
+          provincia: provincia,
+          localidad: localidad,
+          codigoPostal: codigoPostal,
         },
       },
       productos: cart.map((item) => ({
@@ -44,39 +80,99 @@ function OrdenForm() {
     const orderCollection = collection(db, "pedidos");
 
     addDoc(orderCollection, orden).then(({ id }) => {
-      return console.log(`Orden creada con id: ${id}`);
+      Swal.fire("Orden realizada!", `Id del producto: ${id}`, "success");
     });
-
-    console.log(orden);
   };
-  nuevaOrden()
+
+  // nuevaOrden();
   return (
     <>
-      <form onSubmit={() => 
-        {nuevaOrden()}}>
-        <div className="form-row">
-          <div className="form-group col-md-12">
-            <label>Correo electronico</label>
-            <input type="email" className="form-control" id="inputEmail4" />
-          </div>
-        </div>
-        <div className="form-group">
-          <label>Direccion</label>
-          <input
-            type="text"
-            className="form-control"
-            id="inputAddress"
-            placeholder="Av. Siempre Viva #123"
-          />
-        </div>
+      <form onSubmit={nuevaOrden}>
         <div className="form-row">
           <div className="form-group col-md-6">
-            <label>Provincia</label>
-            <input type="text" className="form-control" id="inputCity" />
+            <label htmlFor="inputNombre">Nombre</label>
+            <input
+              type="text"
+              value={nombre}
+              onChange={nombreHandler}
+              className="form-control"
+              id="inputNombre"
+            />
+          </div>
+
+          <div className="form-group col-md-6">
+            <label htmlFor="inputDocumento">Documento</label>
+            <input
+              type="number"
+              value={documento}
+              onChange={documentoHandler}
+              className="form-control"
+              id="inputDocumento"
+            />
+          </div>
+
+          <div className="form-group col-md-6">
+            <label htmlFor="inputTelefono">Telefono</label>
+            <input
+              type="number"
+              value={telefono}
+              onChange={telefonoHandler}
+              className="form-control"
+              id="inputTelefono"
+            />
+          </div>
+
+          <div className="form-group col-md-6">
+            <label htmlFor="inputEmail">Correo electronico</label>
+            <input
+              type="email"
+              value={email}
+              onChange={emailHandler}
+              className="form-control"
+              id="inputEmail"
+            />
+          </div>
+
+          <div className="form-group col-md-6">
+            <label htmlFor="inputDireccion">Direccion</label>
+            <input
+              type="text"
+              value={direccion}
+              onChange={direccionHandler}
+              className="form-control"
+              id="inputDireccion"
+            />
+          </div>
+
+          <div className="form-group col-md-6">
+            <label htmlFor="inputProvincia">Provincia</label>
+            <input
+              type="text"
+              value={provincia}
+              onChange={provinciaHandler}
+              className="form-control"
+              id="inputProvincia"
+            />
+          </div>
+          <div className="form-group col-md-6">
+            <label htmlFor="inputLocalidad">Localidad</label>
+            <input
+              type="text"
+              value={localidad}
+              onChange={localidadHandler}
+              className="form-control"
+              id="inputLocalidad"
+            />
           </div>
           <div className="form-group col-md-3">
-            <label>Codigo postal</label>
-            <input type="text" className="form-control" id="inputZip" />
+            <label htmlFor="inputCP">Codigo postal</label>
+            <input
+              type="number"
+              value={codigoPostal}
+              onChange={cpHandler}
+              className="form-control"
+              id="inputCP"
+            />
           </div>
         </div>
 

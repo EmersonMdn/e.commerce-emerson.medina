@@ -20,8 +20,8 @@
     padding: 40px 0;
 }
 
-.imgExample{
-    height: 270px;
+.itemImg{
+    height: 310px;
     width: 270px;
     margin: auto;
     display: flex;
@@ -30,9 +30,10 @@
     background-color: rgba(75, 75, 75, 0.459);
     color: #000;
 }
-.imgExample img{
+.itemImg img{
     height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 .details{
     display: flex;

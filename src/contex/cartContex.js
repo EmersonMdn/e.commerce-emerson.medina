@@ -1,8 +1,29 @@
+import Swal from "sweetalert2";
+
 import { createContext, useState } from "react";
 
 export const CartContext = createContext({});
 
 const { Provider } = CartContext;
+
+const alertOnCart = () => {
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 1400,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+  })
+  
+  Toast.fire({
+    icon: 'success',
+    title: 'Agregado al carrito'
+  })
+}
 
 export const CartProvider = ({ defaultValue = [], children }) => {
   const [cart, setCart] = useState(defaultValue);
@@ -20,7 +41,11 @@ export const CartProvider = ({ defaultValue = [], children }) => {
     } else {
       setCart([...cart, { item: product, cant: count }]);
     }
+
+    alertOnCart();
   };
+
+
 
   const isInCart = (id) => {
     return cart.find((elem) => elem.item.id === id);

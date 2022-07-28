@@ -19,7 +19,7 @@ function ItemDetail(props) {
       <div className="container">
         <div className="row">
           <div className="col-md-4 imgDetail">
-            <div className="imgExample animated-box in">
+            <div className="itemImg animated-box in">
               <img src={props.productos.img} alt={props.productos.nombre} />
             </div>
           </div>
