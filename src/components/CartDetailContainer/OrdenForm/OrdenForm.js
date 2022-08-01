@@ -7,43 +7,45 @@ import { CartContext } from "../../../contex/cartContex";
 function OrdenForm() {
   const { cart, getTotal } = useContext(CartContext);
 
-  const { nombre, setNombre } = useState("");
-  const { documento, setDocumento } = useState(0);
-  const { telefono, setTelefono } = useState(0);
-  const { email, setEmail } = useState("");
-  const { direccion, setDireccion } = useState("");
-  const { provincia, setProvincia } = useState("");
-  const { localidad, setLocalidad } = useState("");
-  const { codigoPostal, setCP } = useState(0);
+  const [inputNombre, setInputNombre] = useState("");
+  const [inputdocumento, setDocumento] = useState("");
+  const [inputTelefono, setTelefono] = useState("");
+  const [inputEmail, setEmail] = useState("");
+  const [inputDireccion, setDireccion] = useState("");
+  const [inputProvincia, setProvincia] = useState("");
+  const [inputLocalidad, setLocalidad] = useState("");
+  const [inputCodigoPostal, setCP] = useState("");
 
   let precioTotal = getTotal().toFixed(2);
 
   const nombreHandler = (e) => {
-    setNombre(e.target.value);
+    setInputNombre(e.target.value);
   };
-  const documentoHandler = (e) => {
-    setDocumento(e.target.value);
+  const documentoHandler = (event) => {
+    setDocumento(event.target.value);
   };
-  const telefonoHandler = (e) => {
-    setTelefono(e.target.value);
+  const telefonoHandler = (event) => {
+    setTelefono(event.target.value);
   };
-  const emailHandler = (e) => {
-    setEmail(e.target.value);
+  const emailHandler = (event) => {
+    setEmail(event.target.value);
   };
-  const direccionHandler = (e) => {
-    setDireccion(e.target.value);
+  const direccionHandler = (event) => {
+    setDireccion(event.target.value);
   };
-  const provinciaHandler = (e) => {
-    setProvincia(e.target.value);
+  const provinciaHandler = (event) => {
+    setProvincia(event.target.value);
   };
-  const localidadHandler = (e) => {
-    setLocalidad(e.target.value);
+  const localidadHandler = (event) => {
+    setLocalidad(event.target.value);
   };
-  const cpHandler = (e) => {
-    setCP(e.target.value);
+  const cpHandler = (event) => {
+    setCP(event.target.value);
   };
 
-  const nuevaOrden = () => {
+  const nuevaOrden = (event) => {
+    event.preventDefault();
+
     let fecha = new Date();
 
     let fechaFormato = `${fecha.getDate()}/${
@@ -54,15 +56,15 @@ function OrdenForm() {
 
     const orden = {
       comprador: {
-        nombre: nombre,
-        email: email,
-        documento: documento,
-        telefono: telefono,
+        nombre: inputNombre,
+        email: inputEmail,
+        documento: inputdocumento,
+        telefono: inputTelefono,
         ubicacion: {
-          direccion: direccion,
-          provincia: provincia,
-          localidad: localidad,
-          codigoPostal: codigoPostal,
+          direccion: inputDireccion,
+          provincia: inputProvincia,
+          localidad: inputLocalidad,
+          codigoPostal: inputCodigoPostal,
         },
       },
       productos: cart.map((item) => ({
@@ -75,6 +77,8 @@ function OrdenForm() {
       total: precioTotal,
     };
 
+    console.log(orden);
+
     const db = getFirestore();
 
     const orderCollection = collection(db, "pedidos");
@@ -84,7 +88,6 @@ function OrdenForm() {
     });
   };
 
-  // nuevaOrden();
   return (
     <>
       <form onSubmit={nuevaOrden}>
@@ -93,7 +96,6 @@ function OrdenForm() {
             <label htmlFor="inputNombre">Nombre</label>
             <input
               type="text"
-              value={nombre}
               onChange={nombreHandler}
               className="form-control"
               id="inputNombre"
@@ -104,7 +106,6 @@ function OrdenForm() {
             <label htmlFor="inputDocumento">Documento</label>
             <input
               type="number"
-              value={documento}
               onChange={documentoHandler}
               className="form-control"
               id="inputDocumento"
@@ -115,7 +116,6 @@ function OrdenForm() {
             <label htmlFor="inputTelefono">Telefono</label>
             <input
               type="number"
-              value={telefono}
               onChange={telefonoHandler}
               className="form-control"
               id="inputTelefono"
@@ -126,7 +126,6 @@ function OrdenForm() {
             <label htmlFor="inputEmail">Correo electronico</label>
             <input
               type="email"
-              value={email}
               onChange={emailHandler}
               className="form-control"
               id="inputEmail"
@@ -137,7 +136,6 @@ function OrdenForm() {
             <label htmlFor="inputDireccion">Direccion</label>
             <input
               type="text"
-              value={direccion}
               onChange={direccionHandler}
               className="form-control"
               id="inputDireccion"
@@ -148,7 +146,6 @@ function OrdenForm() {
             <label htmlFor="inputProvincia">Provincia</label>
             <input
               type="text"
-              value={provincia}
               onChange={provinciaHandler}
               className="form-control"
               id="inputProvincia"
@@ -158,7 +155,6 @@ function OrdenForm() {
             <label htmlFor="inputLocalidad">Localidad</label>
             <input
               type="text"
-              value={localidad}
               onChange={localidadHandler}
               className="form-control"
               id="inputLocalidad"
@@ -168,7 +164,6 @@ function OrdenForm() {
             <label htmlFor="inputCP">Codigo postal</label>
             <input
               type="number"
-              value={codigoPostal}
               onChange={cpHandler}
               className="form-control"
               id="inputCP"
@@ -190,7 +185,7 @@ function OrdenForm() {
         </div>
 
         <button type="submit" className="submitOrder">
-          Comprar{" "}
+          Comprar
         </button>
       </form>
     </>
