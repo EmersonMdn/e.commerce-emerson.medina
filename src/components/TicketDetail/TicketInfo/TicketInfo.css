@@ -34,3 +34,13 @@ td {
   text-transform: uppercase;
   font-weight: bolder;
 }
+.volver-btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.403);
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+}

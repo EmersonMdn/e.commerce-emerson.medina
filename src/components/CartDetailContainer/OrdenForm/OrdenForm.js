@@ -193,23 +193,21 @@ function OrdenForm() {
             </label>
           </div>
         </div>
-        <Link to={"/"} className="btn btn-dark">
+        {!isOk && (<Link to={"/"} className="btn btn-dark">
           <i className="fa-regular fa-circle-left"></i> Cancelar
-        </Link>
-        <button type="submit" className="submitOrder btn btn-warning">
+        </Link>)}
+        {!isOk && (<button type="submit" className="submitOrder btn btn-warning">
           Comprar
-        </button>
-      </form>
-
-      {isOk && (
-        <div>
+        </button>)}
+        {isOk && (
+        <div className="voucher-container">
           <Link to={"/ticket"}>
-            <p>
             <i className="fa-solid fa-ticket-simple"></i> Imprimir ticket
-            </p>
           </Link>
         </div>
       )}
+      </form>
+
     </div>
   );
 }

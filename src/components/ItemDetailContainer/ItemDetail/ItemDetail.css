@@ -44,6 +44,7 @@
   align-items: center;
   background-color: rgba(2, 2, 2, 0.337);
   border-radius: 15px;
+  color: rgb(228, 213, 213);
 }
 .details h2 {
   text-transform: uppercase;
@@ -201,7 +202,6 @@
 .itemCount-container {
   display: flex;
   align-items: center;
-  margin-top: 20px;
 }
 
 .cartEx {
@@ -222,4 +222,13 @@
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
+}
+
+.precio-ctn {
+  align-items: center;
+  font-size: 30px;
+  border: 2px solid rgb(228, 213, 213);
+  border-radius: 5px;
+  padding: 5px;
+  background-image: linear-gradient(to top right,rgba(239, 75, 165, 0.508), rgba(178, 6, 155, 0.137));
 }

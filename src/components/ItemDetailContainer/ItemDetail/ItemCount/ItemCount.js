@@ -16,6 +16,7 @@ function ItemCount(props) {
         if(valor > 1){
             setValor (valor - 1);
         }
+        
     }
  
     const onAdd = () => {

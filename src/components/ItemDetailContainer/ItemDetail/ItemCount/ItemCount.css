@@ -2,6 +2,12 @@ p{
     margin: 0;
     padding: 0
 }
+.item-count-container {
+    background-color: rgba(0, 0, 0, 0.073);
+
+    padding: 10px ;
+    font-family: poppins;
+}
 
 .item-count{
     display: flex;

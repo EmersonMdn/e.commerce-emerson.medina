@@ -7,8 +7,16 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import { CartProvider } from "./contex/cartContex";
 import CartDetailContainer from "./components/CartDetailContainer/CartDetailContainer";
 import TicketDetail from "./components/TicketDetail/TicketDetail";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 function App() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <>
       <CartProvider>
@@ -34,7 +42,7 @@ function App() {
 
           <Route path="/*" element={<ItemListContainer />} />
 
-          <Route path='/ticket' element={<TicketDetail />} />
+          <Route path="/ticket" element={<TicketDetail />} />
         </Routes>
         <Footer />
       </CartProvider>

@@ -1,6 +1,18 @@
 .itemList{
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: center;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    grid-gap: 10px;
+    margin: 10px 0;
+    padding: 20px ;
 }
+
+@media screen and (max-width: 767px) {
+    .itemList{
+        justify-items: center;
+        /* display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center; */
+    }
+}
+    

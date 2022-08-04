@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./TicketInfo.css";
 function TicketInfo(props) {
   const { orden, id } = props;
@@ -26,27 +27,36 @@ function TicketInfo(props) {
             {orden.comprador.ubicacion.localidad},{" "}
             {orden.comprador.ubicacion.provincia}
           </p>
-          
         </div>
         <hr></hr>
         <div className="ticket-product">
-          {orden.productos.map((item) => (
-            <div className="product-item" key={item.id}>
-              <table>
-                <tbody>
-                  <tr>
-                    <td className="td-nombre">{item.nombre}</td>
-                    <td className="td-precio">${item.precio}</td>
-                    <td className="td-cant">{item.cantidad}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          ))}
+          <table>
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+              </tr>
+            </thead>
+            {orden.productos.map((item) => (
+              <tbody>
+                <tr>
+                  <td className="td-nombre">{item.nombre}</td>
+                  <td className="td-cant">{item.cantidad}</td>
+                  <td className="td-precio">${item.precio}</td>
+                </tr>
+              </tbody>
+            ))}
+          </table>
         </div>
+        <hr></hr>
         <div className="precioTotal">
           <p>Total: ${orden.total}</p>
         </div>
+
+        <hr></hr>
+
+        <Link to="/" className="volver-btn">Volver al inicio</Link>
       </div>
     </>
   );

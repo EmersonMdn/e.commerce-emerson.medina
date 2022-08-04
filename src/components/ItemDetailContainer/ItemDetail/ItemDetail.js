@@ -23,21 +23,25 @@ function ItemDetail(props) {
               <div className="itemImg animated-box in">
                 <img src={props.productos.img} alt={props.productos.nombre} />
               </div>
+              
             </div>
 
             <div className="col-md-8 details">
               <h2>{props.productos.nombre}</h2>
               <p>Categoria: {props.productos.categoria}</p>
+              <p className='text-center precio-ctn'><strong>${props.productos.precio}</strong></p>
 
               <div className="itemCount-container">
                 {isActive && (
                   <ItemCount
                     onCart={onCart}
+                    precio={props.productos.precio}
                     setIsActive={setIsActive}
                     stock={props.productos.stock}
                     key={props.productos.id}
                   />
                 )}
+                
 
                 {/* Lleva a '/cart'  */}
                 {!isActive && (
