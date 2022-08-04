@@ -9,3 +9,8 @@
     padding-top: 20px ;
     font-weight: bolder;
 }
+
+.spinner-border{
+    height: 100px;
+    width: 100px;
+}

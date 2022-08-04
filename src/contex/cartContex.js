@@ -9,24 +9,25 @@ const { Provider } = CartContext;
 const alertOnCart = () => {
   const Toast = Swal.mixin({
     toast: true,
-    position: 'top-end',
+    position: "top-end",
     showConfirmButton: false,
     timer: 1400,
     timerProgressBar: true,
     didOpen: (toast) => {
-      toast.addEventListener('mouseenter', Swal.stopTimer)
-      toast.addEventListener('mouseleave', Swal.resumeTimer)
-    }
-  })
-  
+      toast.addEventListener("mouseenter", Swal.stopTimer);
+      toast.addEventListener("mouseleave", Swal.resumeTimer);
+    },
+  });
+
   Toast.fire({
-    icon: 'success',
-    title: 'Agregado al carrito'
-  })
-}
+    icon: "success",
+    title: "Agregado al carrito",
+  });
+};
 
 export const CartProvider = ({ defaultValue = [], children }) => {
   const [cart, setCart] = useState(defaultValue);
+  const [myUser, setMyUser] = useState(defaultValue);
 
   const addToCart = (product, count) => {
     if (isInCart(product.id)) {
@@ -45,15 +46,14 @@ export const CartProvider = ({ defaultValue = [], children }) => {
     alertOnCart();
   };
 
-
-
   const isInCart = (id) => {
     return cart.find((elem) => elem.item.id === id);
   };
 
   const removeFromCart = (productId) => {
-    const newCart = 
-    [...cart].filter( (element) => element.item.id !== productId);
+    const newCart = [...cart].filter(
+      (element) => element.item.id !== productId
+    );
     setCart(newCart);
   };
 
@@ -81,14 +81,20 @@ export const CartProvider = ({ defaultValue = [], children }) => {
     return total;
   };
 
+  const getUserData = (user) => {
+    setMyUser(user);
+  };
+
   const contex = {
     cart,
+    myUser,
     addToCart,
     clearCart,
     isInCart,
     removeFromCart,
     getQuantity,
     getTotal,
+    getUserData,
   };
 
   return <Provider value={contex}>{children}</Provider>;

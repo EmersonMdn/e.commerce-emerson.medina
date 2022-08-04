@@ -82,9 +82,9 @@ function NavBar() {
           </div>
         </nav>
       </div>
-      <p className="text-descuento">
-        15% de descuento en compras superiores a $ 2.999
-      </p>
+      {/* <p className="text-descuento">
+        Envios a todo el país.
+      </p> */}
     </>
   );
 }

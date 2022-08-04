@@ -1,15 +1,14 @@
-.cartDetails .order-container {
+.cart-container .order-container {
   font-family: poppins; 
-  padding: 20px 0 0 0;
+  padding: 20px;
   color: rgb(0, 0, 0);
-
+  width: 100%;
 }
 
 .order-container {
-  padding: 0 ;
   font-family: poppins; 
-  color: rgb(0, 0, 0);
-  text-align: center;
-  width: 100%;
+}
+.order-container .list-group{
+  border: 1px solid rgb(15, 15, 15);
 }
 

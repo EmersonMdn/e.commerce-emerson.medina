@@ -10,7 +10,7 @@ function CardItem(props) {
   return (
     <>
       <li className="list-group-item" key={props.id}>
-        <strong>{props.cantidad}</strong> {props.nombre} <span className="priceStyle">${precio}</span> <button onClick={()=> removeFromCart(props.id)} className="eliminarItem">X</button>
+        <strong>{props.cantidad}</strong> {props.nombre} <span className="priceStyle">${precio}</span> <button onClick={()=> removeFromCart(props.id)} className="eliminarItem">Eliminar</button>
       </li>
     </>
   );

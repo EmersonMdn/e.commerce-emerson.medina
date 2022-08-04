@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import { CartProvider } from "./contex/cartContex";
 import CartDetailContainer from "./components/CartDetailContainer/CartDetailContainer";
+import TicketDetail from "./components/TicketDetail/TicketDetail";
 
 function App() {
   return (
@@ -32,6 +33,8 @@ function App() {
           <Route path="/cart" element={<CartDetailContainer />} />
 
           <Route path="/*" element={<ItemListContainer />} />
+
+          <Route path='/ticket' element={<TicketDetail />} />
         </Routes>
         <Footer />
       </CartProvider>

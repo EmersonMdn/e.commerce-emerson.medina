@@ -3,9 +3,10 @@ import Swal from "sweetalert2";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { useContext, useState } from "react";
 import { CartContext } from "../../../contex/cartContex";
+import { Link } from "react-router-dom";
 
 function OrdenForm() {
-  const { cart, getTotal } = useContext(CartContext);
+  const { cart, getTotal, getUserData, clearCart } = useContext(CartContext);
 
   const [inputNombre, setInputNombre] = useState("");
   const [inputdocumento, setDocumento] = useState("");
@@ -15,6 +16,7 @@ function OrdenForm() {
   const [inputProvincia, setProvincia] = useState("");
   const [inputLocalidad, setLocalidad] = useState("");
   const [inputCodigoPostal, setCP] = useState("");
+  const [isOk, setIsOk] = useState(false);
 
   let precioTotal = getTotal().toFixed(2);
 
@@ -76,7 +78,6 @@ function OrdenForm() {
       hora: getTime,
       total: precioTotal,
     };
-
     console.log(orden);
 
     const db = getFirestore();
@@ -85,13 +86,22 @@ function OrdenForm() {
 
     addDoc(orderCollection, orden).then(({ id }) => {
       Swal.fire("Orden realizada!", `Id del producto: ${id}`, "success");
+      let newOrder = [{ orden, id: id }];
+      getUserData(newOrder);
+      clearCart();
+      setIsOk(true);
     });
   };
 
   return (
-    <>
+    <div className="form-user">
+      <h2>Formulario de pedido</h2>
+      <p>
+        Tu compra ya esta casi lista, solo completa el siguiente formulario con
+        tus datos:
+      </p>
       <form onSubmit={nuevaOrden}>
-        <div className="form-row">
+        <div className="form-row form-box">
           <div className="form-group col-md-6">
             <label htmlFor="inputNombre">Nombre</label>
             <input
@@ -183,12 +193,24 @@ function OrdenForm() {
             </label>
           </div>
         </div>
-
-        <button type="submit" className="submitOrder">
+        <Link to={"/"} className="btn btn-dark">
+          <i className="fa-regular fa-circle-left"></i> Cancelar
+        </Link>
+        <button type="submit" className="submitOrder btn btn-warning">
           Comprar
         </button>
       </form>
-    </>
+
+      {isOk && (
+        <div>
+          <Link to={"/ticket"}>
+            <p>
+            <i className="fa-solid fa-ticket-simple"></i> Imprimir ticket
+            </p>
+          </Link>
+        </div>
+      )}
+    </div>
   );
 }
 

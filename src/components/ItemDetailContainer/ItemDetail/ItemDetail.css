@@ -1,156 +1,225 @@
-
-.imgDetail{
+.imgDetail {
   display: flex;
   justify-content: left;
 }
 @media screen and (max-width: 568px) {
-  .imgDetail{
+  .imgDetail {
     padding-bottom: 60px;
   }
-  .details{
+  .details {
     justify-content: center;
     align-items: center;
   }
 }
-  
-.detailContainer{
-    background: rgb(63,215,251);
-    background: radial-gradient(circle, rgba(63, 216, 251, 0.582) 0%, rgba(136,131,186,1) 53%, rgba(252,70,70,1) 100%);
-    font-family: Poppins;
-    padding: 40px 0;
+
+.detailContainer {
+  background-color: rgb(129, 200, 255);
+  background-image: url('../../../assets/img/assetsss/mountains-1412683.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: Poppins;
+  padding: 40px 0;
 }
 
-.itemImg{
-    height: 310px;
-    width: 270px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(75, 75, 75, 0.459);
-    color: #000;
+.itemImg {
+  height: 310px;
+  width: 370px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(75, 75, 75, 0.459);
+  color: #000;
 }
-.itemImg img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+.itemImg img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
-.details{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(2, 2, 2, 0.062);
-    border-radius: 15px;
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(2, 2, 2, 0.337);
+  border-radius: 15px;
 }
-.details h2{
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.detail-h1{
-    color: rgba(39, 6, 6, 0.774);
-    font-weight: bolder;
-    text-align: center;
+.details h2 {
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
-
+.detail-h1 {
+  color: rgba(39, 6, 6, 0.774);
+  font-weight: bolder;
+  text-align: center;
+}
 
 .animated-box {
-    color: #ffffff;
-    padding: 10px;
-    text-align: center;
-    border-radius: 4px;
-  }
-  
-  .animated-box h1 {
-    font-weight: 200;
-    font-size: 40px;
-    text-transform: uppercase;
-  }
-  
-  .animated-box p {
-    font-weight: 200;
-  }
-  
-  /* The animation starts here */
-  .animated-box {
-    position: relative;
-  }
-  
-  .animated-box:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 4px;
-    /* background: linear-gradient(rgb(93, 223, 95) 0%, rgb(56, 171, 18) 53%, rgb(75, 235, 128) 100%); */
-    background: linear-gradient(rgb(255, 73, 1) 0%, rgb(255, 252, 93) 53%, rgba(252,70,70,1) 100%);
-    background-size: 300% 300%;
-    clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 3px), 3px calc(100% - 3px), 3px 100%, 100% 100%, 100% 0%, 0% 0%);
-  }
-  
-  .animated-box.in:after {
-    animation: frame-enter 1s forwards ease-in-out reverse, gradient-animation 4s ease-in-out infinite;
-  }
-  
-  /* motion */
-  @keyframes gradient-animation {
-    0% {
-      background-position: 15% 0%;
-    }
-    50% {
-      background-position: 85% 100%;
-    }
-    100% {
-      background-position: 15% 0%;
-    }
-  }
-  
-  @keyframes frame-enter {
-    0% {
-      clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 3px), 3px calc(100% - 3px), 3px 100%, 100% 100%, 100% 0%, 0% 0%);
-    }
-    25% {
-      clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 3px), calc(100% - 3px) calc(100% - 3px), calc(100% - 3px) 100%, 100% 100%, 100% 0%, 0% 0%);
-    }
-    50% {
-      clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, 100% 0%, 0% 0%);
-    }
-    75% {
-      -webkit-clip-path: polygon(0% 100%, 3px 100%, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 0%, 0% 0%);
-    }
-    100% {
-      -webkit-clip-path: polygon(0% 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 0% 100%);
-    }
-  }
-  
-
-
-.itemCount-container{
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
 }
 
-.cartEx{
-    font-weight: bold;
-    background-color: rgba(3, 173, 196, 0.164);
-    margin-top: 5px;
-    padding: 10px;
-    border-radius: 5px;
+.animated-box h1 {
+  font-weight: 200;
+  font-size: 40px;
+  text-transform: uppercase;
 }
 
-.volver-btn{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: rgba(0, 0, 0, 0.403);
-    padding: 10px;
-    border-radius: 5px;
-    color: #fff;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-align: center;
-}	
+.animated-box p {
+  font-weight: 200;
+}
+
+/* The animation starts here */
+.animated-box {
+  position: relative;
+}
+
+.animated-box:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 4px;
+  /* background: linear-gradient(rgb(93, 223, 95) 0%, rgb(56, 171, 18) 53%, rgb(75, 235, 128) 100%); */
+  background: linear-gradient(
+    rgb(243, 3, 223) 20%,
+    rgb(224, 224, 208) 53%,
+    rgb(240, 0, 168) 100%
+  );
+  background-size: 300% 300%;
+  clip-path: polygon(
+    0% 100%,
+    3px 100%,
+    3px 3px,
+    calc(100% - 3px) 3px,
+    calc(100% - 3px) calc(100% - 3px),
+    3px calc(100% - 3px),
+    3px 100%,
+    100% 100%,
+    100% 0%,
+    0% 0%
+  );
+}
+
+.animated-box.in:after {
+  animation: frame-enter 1s forwards ease-in-out reverse,
+    gradient-animation 4s ease-in-out infinite;
+}
+
+/* motion */
+@keyframes gradient-animation {
+  0% {
+    background-position: 15% 0%;
+  }
+  50% {
+    background-position: 85% 100%;
+  }
+  100% {
+    background-position: 15% 0%;
+  }
+}
+
+@keyframes frame-enter {
+  0% {
+    clip-path: polygon(
+      0% 100%,
+      3px 100%,
+      3px 3px,
+      calc(100% - 3px) 3px,
+      calc(100% - 3px) calc(100% - 3px),
+      3px calc(100% - 3px),
+      3px 100%,
+      100% 100%,
+      100% 0%,
+      0% 0%
+    );
+  }
+  25% {
+    clip-path: polygon(
+      0% 100%,
+      3px 100%,
+      3px 3px,
+      calc(100% - 3px) 3px,
+      calc(100% - 3px) calc(100% - 3px),
+      calc(100% - 3px) calc(100% - 3px),
+      calc(100% - 3px) 100%,
+      100% 100%,
+      100% 0%,
+      0% 0%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      0% 100%,
+      3px 100%,
+      3px 3px,
+      calc(100% - 3px) 3px,
+      calc(100% - 3px) 3px,
+      calc(100% - 3px) 3px,
+      calc(100% - 3px) 3px,
+      calc(100% - 3px) 3px,
+      100% 0%,
+      0% 0%
+    );
+  }
+  75% {
+    -webkit-clip-path: polygon(
+      0% 100%,
+      3px 100%,
+      3px 3px,
+      3px 3px,
+      3px 3px,
+      3px 3px,
+      3px 3px,
+      3px 3px,
+      3px 0%,
+      0% 0%
+    );
+  }
+  100% {
+    -webkit-clip-path: polygon(
+      0% 100%,
+      3px 100%,
+      3px 100%,
+      3px 100%,
+      3px 100%,
+      3px 100%,
+      3px 100%,
+      3px 100%,
+      3px 100%,
+      0% 100%
+    );
+  }
+}
+
+.itemCount-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.cartEx {
+  font-weight: bold;
+  background-color: rgba(3, 173, 196, 0.164);
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.volver-btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.403);
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+}

@@ -1,0 +1,36 @@
+.ticket-info-container {
+  font-family: poppins;
+  padding: 20px 100px;
+  color: rgb(0, 0, 0);
+  width: 100%;
+  background-color: #fff;
+}
+.head-ticket {
+  text-align: center;
+}
+.item_user-info {
+  font-size: 17px;
+  text-transform: uppercase;
+}
+table {
+  width: 100%;
+}
+td {
+  border: 1px solid gray;
+  padding: 10px;
+}
+
+.td-nombre {
+  width: 50%;
+}
+.td-pricio {
+  width: 25%;
+}
+.td-cant {
+  width: 25%;
+}
+.precioTotal {
+  text-align: right;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
