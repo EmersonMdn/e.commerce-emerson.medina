@@ -24,6 +24,7 @@ function ItemDetailContainer() {
     getProduct(productId).then((data) => {
       setItem(data);
     });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [productId]);
 
   return (

@@ -27,11 +27,11 @@ function CartDetailContainer() {
             </Link>
             {cart.length >= 1 ? (
               <button className="btn btn-primary" onClick={isActiveHandler}>
-                Proceder pago
+                Continuar el pago
               </button>
             ) : (
               <button className="btn btn-primary" disabled>
-                Proceder pago
+                Continuar el pago
               </button>
             )}
             {cart.length >= 1 ? (
@@ -59,25 +59,3 @@ function CartDetailContainer() {
 
 export default CartDetailContainer;
 
-{
-  /* <div className="container cart-container">
-        <div className="row">
-          <div className="col-md-8 form-buyer-info">
-            <OrdenForm />
-          </div>
-
-          <div className="col-md-4 cartDetails">
-            <CartDetail />
-
-            <div className="botones">
-              <button className="vaciar-carro" onClick={clearCart}>
-                Vaciar carro
-              </button>
-              <Link to={"/"} className="volver">
-                Volver
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div> */
-}

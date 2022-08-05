@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from 'react';
+import React, {useRef} from 'react';
 import './SlideShow.css';
 import img1 from './../../../assets/img/Indumentaria/gr1.jpg';
 import img2 from './../../../assets/img/Joyas/image .png';
@@ -8,7 +8,7 @@ import img4 from './../../../assets/img/assetsss/4.jpg';
 
 function SlideShow() {
     const slideShow = useRef(null);
-    const intervaloSlide = useRef(null);
+    // const intervaloSlide = useRef(null);
 
     const siguiente = () => {
         //Comprobamos que ek slideshow tenga elementos

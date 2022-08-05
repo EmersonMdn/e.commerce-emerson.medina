@@ -1,6 +1,6 @@
 import "./ItemListContainer.css";
 import ItemList from "./ItemList/ItemList";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import SliderProducts from "../SliderProducts/SliderProducts";
 import { useParams } from "react-router-dom";
 import { collection, getDocs, getFirestore } from "firebase/firestore";
@@ -40,6 +40,7 @@ function ItemListContainer({ greeting }) {
           setIsActive(false);
         },5000);
       });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idCategoria]);
 
   return (

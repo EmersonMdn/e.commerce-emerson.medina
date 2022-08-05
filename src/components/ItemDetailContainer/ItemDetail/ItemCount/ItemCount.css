@@ -51,15 +51,6 @@ p{
     padding: 10px;
 }
 
-.finish-btn{
-    background-color: rgb(255, 166, 0);
-    padding: 10px;
-    border-radius: 5px;
-    color: rgb(15, 15, 15);
-    font-weight: 500;
-    text-transform: uppercase;
-    text-align: center;
-}
 
 .disponible{
     color: rgb(228, 231, 235);

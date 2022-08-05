@@ -109,6 +109,7 @@ function OrdenForm() {
               onChange={nombreHandler}
               className="form-control"
               id="inputNombre"
+              required
             />
           </div>
 
@@ -119,6 +120,7 @@ function OrdenForm() {
               onChange={documentoHandler}
               className="form-control"
               id="inputDocumento"
+              required
             />
           </div>
 
@@ -129,6 +131,7 @@ function OrdenForm() {
               onChange={telefonoHandler}
               className="form-control"
               id="inputTelefono"
+              required
             />
           </div>
 
@@ -139,6 +142,7 @@ function OrdenForm() {
               onChange={emailHandler}
               className="form-control"
               id="inputEmail"
+              required
             />
           </div>
 
@@ -149,6 +153,7 @@ function OrdenForm() {
               onChange={direccionHandler}
               className="form-control"
               id="inputDireccion"
+              required
             />
           </div>
 
@@ -159,6 +164,7 @@ function OrdenForm() {
               onChange={provinciaHandler}
               className="form-control"
               id="inputProvincia"
+              required
             />
           </div>
           <div className="form-group col-md-6">
@@ -168,6 +174,7 @@ function OrdenForm() {
               onChange={localidadHandler}
               className="form-control"
               id="inputLocalidad"
+              required
             />
           </div>
           <div className="form-group col-md-3">
@@ -177,6 +184,7 @@ function OrdenForm() {
               onChange={cpHandler}
               className="form-control"
               id="inputCP"
+              required
             />
           </div>
         </div>
@@ -187,27 +195,31 @@ function OrdenForm() {
               className="form-check-input"
               type="checkbox"
               id="gridCheck"
+              required
             />
             <label className="form-check-label">
               Acepto los terminos y condiciones
             </label>
           </div>
         </div>
-        {!isOk && (<Link to={"/"} className="btn btn-dark">
-          <i className="fa-regular fa-circle-left"></i> Cancelar
-        </Link>)}
-        {!isOk && (<button type="submit" className="submitOrder btn btn-warning">
-          Comprar
-        </button>)}
-        {isOk && (
-        <div className="voucher-container">
-          <Link to={"/ticket"}>
-            <i className="fa-solid fa-ticket-simple"></i> Imprimir ticket
+        {!isOk && (
+          <Link to={"/"} className="btn btn-dark">
+            <i className="fa-regular fa-circle-left"></i> Cancelar
           </Link>
-        </div>
-      )}
+        )}
+        {!isOk && (
+          <button type="submit" className="submitOrder btn btn-warning">
+            Comprar
+          </button>
+        )}
+        {isOk && (
+          <div className="voucher-container">
+            <Link to={"/ticket"}>
+              <i className="fa-solid fa-ticket-simple"></i> Imprimir ticket
+            </Link>
+          </div>
+        )}
       </form>
-
     </div>
   );
 }
